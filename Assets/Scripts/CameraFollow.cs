@@ -13,9 +13,9 @@ public class CameraFollow : MonoBehaviour {
 
 	public void MoveToTarget()
 	{
-		offset.x = 0;
-		offset.y = 2;
-		offset.z = -5;
+		// offset.x = 0;
+		offset.y = 6;
+		offset.z = -30;
 		
 		Vector3 _targetPos = objectToFollow.position + 
 							 objectToFollow.forward * offset.z + 

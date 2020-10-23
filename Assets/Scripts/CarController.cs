@@ -33,7 +33,7 @@ public class CarController : MonoBehaviour
     [SerializeField] private WheelCollider rearRightWheelCollider;
 
     [SerializeField] private Transform frontLeftWheelTransform;
-    [SerializeField] private Transform frontRightWheeTransform;
+    [SerializeField] private Transform frontRightWheelTransform;
     [SerializeField] private Transform rearLeftWheelTransform;
     [SerializeField] private Transform rearRightWheelTransform;
     
@@ -43,6 +43,7 @@ public class CarController : MonoBehaviour
         HandleMotor();
         HandleSteering();
         UpdateWheels();
+        print(verticalInput);
     }
     private void GetInput()
     {
@@ -53,22 +54,35 @@ public class CarController : MonoBehaviour
 
     private void HandleMotor()
     {
-        frontLeftWheelCollider.motorTorque = verticalInput * motorForce;
-        frontRightWheelCollider.motorTorque = verticalInput * motorForce;
+        frontLeftWheelCollider.motorTorque = verticalInput * motorForce * 100f * Time.deltaTime;
+        frontRightWheelCollider.motorTorque = verticalInput * motorForce * 100f * Time.deltaTime;
+        rearLeftWheelCollider.motorTorque = verticalInput * motorForce * 100f * Time.deltaTime;
+        rearRightWheelCollider.motorTorque = verticalInput * motorForce * 100f * Time.deltaTime;
         currentbreakForce = isBreaking ? breakForce : 0f;
-        if (isBreaking)
-        {
-            ApplyBreaking();
-        }
-    }
-
-    private void ApplyBreaking()
-    {
         frontRightWheelCollider.brakeTorque = currentbreakForce;
         frontLeftWheelCollider.brakeTorque = currentbreakForce;
         rearLeftWheelCollider.brakeTorque = currentbreakForce;
         rearRightWheelCollider.brakeTorque = currentbreakForce;
+        // if (isBreaking)
+        // {
+        //     ApplyBreaking();
+        // }
+        // else
+        // {
+        //     // frontRightWheelCollider.brakeTorque = currentbreakForce;
+        //     // frontLeftWheelCollider.brakeTorque = currentbreakForce;
+        //     // rearLeftWheelCollider.brakeTorque = currentbreakForce;
+        //     // rearRightWheelCollider.brakeTorque = currentbreakForce;
+        // }
     }
+
+    // private void ApplyBreaking()
+    // {
+    //     frontRightWheelCollider.brakeTorque = currentbreakForce;
+    //     frontLeftWheelCollider.brakeTorque = currentbreakForce;
+    //     rearLeftWheelCollider.brakeTorque = currentbreakForce;
+    //     rearRightWheelCollider.brakeTorque = currentbreakForce;
+    // }
 
     private void HandleSteering()
     {
@@ -80,7 +94,7 @@ public class CarController : MonoBehaviour
     private void UpdateWheels()
     {
         UpdateSingleWheel(frontLeftWheelCollider, frontLeftWheelTransform);
-        UpdateSingleWheel(frontRightWheelCollider, frontRightWheeTransform);
+        UpdateSingleWheel(frontRightWheelCollider, frontRightWheelTransform);
         UpdateSingleWheel(rearRightWheelCollider, rearRightWheelTransform);
         UpdateSingleWheel(rearLeftWheelCollider, rearLeftWheelTransform);
     }

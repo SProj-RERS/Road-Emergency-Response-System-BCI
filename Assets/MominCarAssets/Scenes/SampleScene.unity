@@ -998,7 +998,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6020984043209762623}
   m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4087710990540734285}
@@ -2103,6 +2103,8 @@ GameObject:
   - component: {fileID: 4087710990540734279}
   - component: {fileID: 4087710990539931493}
   - component: {fileID: 4087710990538833317}
+  - component: {fileID: 4087710990540759914}
+  - component: {fileID: 4087710990540759912}
   m_Layer: 0
   m_Name: Classic_16_Hood
   m_TagString: Untagged
@@ -2110,6 +2112,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!65 &4087710990540759912
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4087710990540759911}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.6173669, y: 1.3069608, z: 0.28734928}
+  m_Center: {x: 0, y: -0.63604754, z: -0.11259931}
 --- !u!1 &4087710990540759913
 GameObject:
   m_ObjectHideFlags: 0
@@ -2128,6 +2143,18 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &4087710990540759914
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4087710990540759911}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 313ac2d30e967c94e9eed088e87c6959, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4087710990540759915
 GameObject:
   m_ObjectHideFlags: 0
@@ -2497,7 +2524,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6020984043209762623}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Avatar: {fileID: 9000000, guid: 8cb2d09a3b917b54b9a3ad69add70edd, type: 3}
   m_Controller: {fileID: 0}
   m_CullingMode: 0
@@ -2618,6 +2645,8 @@ GameObject:
   - component: {fileID: 7505541548658104814}
   - component: {fileID: 1238751577771536750}
   - component: {fileID: 5065694895299478315}
+  - component: {fileID: 6020984043209762624}
+  - component: {fileID: 6020984043209762625}
   m_Layer: 0
   m_Name: Classic_16_Bumper_F_1
   m_TagString: Untagged
@@ -2625,6 +2654,31 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &6020984043209762624
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6020984043209762623}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1597c922f99aed8478529759c47e4969, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!65 &6020984043209762625
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6020984043209762623}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.939403, y: 0.5904144, z: 0.4966303}
+  m_Center: {x: 0.00000047683716, y: -2.0791347, z: 0.4170878}
 --- !u!4 &6022472660733789437
 Transform:
   m_ObjectHideFlags: 0

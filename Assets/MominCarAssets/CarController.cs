@@ -6,14 +6,14 @@ using UnityEngine;
 public class CarController : MonoBehaviour
 { 
 
-    void OnCollisionEnter(Collision col)
-    {
-        if(col.collider.name == "Obstacle")
-        {
-            print("Hit!");
-        }
-    }
-    
+    // void OnCollisionEnter(Collision col)
+    // {
+    //     if(col.collider.name == "Obstacle")
+    //     {
+    //         print("Car Hit!");
+    //     }
+    // }
+
     private const string HORIZONTAL = "Horizontal";
     private const string VERTICAL = "Vertical";
 

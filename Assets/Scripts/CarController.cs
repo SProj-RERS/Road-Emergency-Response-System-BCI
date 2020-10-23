@@ -33,7 +33,7 @@ public class CarController : MonoBehaviour
     [SerializeField] private WheelCollider rearRightWheelCollider;
 
     [SerializeField] private Transform frontLeftWheelTransform;
-    [SerializeField] private Transform frontRightWheelTransform;
+    [SerializeField] private Transform frontRightWheeTransform;
     [SerializeField] private Transform rearLeftWheelTransform;
     [SerializeField] private Transform rearRightWheelTransform;
     
@@ -94,7 +94,7 @@ public class CarController : MonoBehaviour
     private void UpdateWheels()
     {
         UpdateSingleWheel(frontLeftWheelCollider, frontLeftWheelTransform);
-        UpdateSingleWheel(frontRightWheelCollider, frontRightWheelTransform);
+        UpdateSingleWheel(frontRightWheelCollider, frontRightWheeTransform);
         UpdateSingleWheel(rearRightWheelCollider, rearRightWheelTransform);
         UpdateSingleWheel(rearLeftWheelCollider, rearLeftWheelTransform);
     }

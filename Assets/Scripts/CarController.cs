@@ -43,7 +43,6 @@ public class CarController : MonoBehaviour
         HandleMotor();
         HandleSteering();
         UpdateWheels();
-        print(verticalInput);
     }
     private void GetInput()
     {
@@ -66,13 +65,6 @@ public class CarController : MonoBehaviour
         // if (isBreaking)
         // {
         //     ApplyBreaking();
-        // }
-        // else
-        // {
-        //     // frontRightWheelCollider.brakeTorque = currentbreakForce;
-        //     // frontLeftWheelCollider.brakeTorque = currentbreakForce;
-        //     // rearLeftWheelCollider.brakeTorque = currentbreakForce;
-        //     // rearRightWheelCollider.brakeTorque = currentbreakForce;
         // }
     }
 

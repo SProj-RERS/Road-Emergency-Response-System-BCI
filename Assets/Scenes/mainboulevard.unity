@@ -3237,7 +3237,7 @@ PrefabInstance:
     - target: {fileID: 2168515750891385483, guid: fb16495a90b59cd4a9f80c6fd8825c4d,
         type: 3}
       propertyPath: m_Mass
-      value: 1000
+      value: 1500
       objectReference: {fileID: 0}
     - target: {fileID: 2168515750891385483, guid: fb16495a90b59cd4a9f80c6fd8825c4d,
         type: 3}
@@ -3253,6 +3253,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_UseGravity
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2168515750891385483, guid: fb16495a90b59cd4a9f80c6fd8825c4d,
+        type: 3}
+      propertyPath: m_AngularDrag
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 2168515750891385483, guid: fb16495a90b59cd4a9f80c6fd8825c4d,
+        type: 3}
+      propertyPath: m_Drag
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 9030763272974093246, guid: fb16495a90b59cd4a9f80c6fd8825c4d,
         type: 3}
@@ -3793,9 +3803,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 856cd6465f0a8f14f8e90c488b99a1e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  motorForce: 30000
-  breakForce: 30000
-  maxSteerAngle: 60
+  motorForce: 50000
+  breakForce: 250000
+  maxSteerAngle: 75
   frontLeftWheelCollider: {fileID: 7155000243128428075}
   frontRightWheelCollider: {fileID: 7155000241531547806}
   rearLeftWheelCollider: {fileID: 7155000242532294336}

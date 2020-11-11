@@ -6,10 +6,12 @@ public class HoodCollision : MonoBehaviour
 {
    public ParticleSystem explosionParticle;
    public AudioClip crashSound;
+   private AudioSource carAudio;
 
    void Start()
    {
        explosionParticle.Stop();
+       carAudio = GetComponent<AudioSource>();
    }
 
     void OnTriggerEnter(Collider other)
@@ -19,6 +21,7 @@ public class HoodCollision : MonoBehaviour
             transform.localRotation = Quaternion.Euler(-160f,0f,0f);
             explosionParticle.Play();
             Debug.Log("???????");
+            carAudio.PlayOneShot(crashSound, 1.0f);
            
         }
     }

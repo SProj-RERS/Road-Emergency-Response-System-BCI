@@ -18,11 +18,16 @@ public class HoodCollision : MonoBehaviour
     {       
         if(other.tag == "othercar")
         {
-            transform.localRotation = Quaternion.Euler(-160f,0f,0f);
+            transform.localRotation = Quaternion.Euler(-28.961f,0.002f,0f);
+            float new_y = transform.localPosition.y - 0.51f;
+            float new_z = transform.localPosition.z + 0.45f;
+            transform.localPosition = new Vector3(0f,new_y,new_z);
             explosionParticle.Play();
-            Debug.Log("???????");
+            carAudio.PlayOneShot(crashSound, 1.0f);  
+        }
+        if(other.tag == "footpath")
+        {
             carAudio.PlayOneShot(crashSound, 1.0f);
-           
         }
     }
 

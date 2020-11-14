@@ -5,6 +5,7 @@ using UnityEngine;
 public class BumperFCollision : MonoBehaviour
 {
    public AudioClip crashSound;
+   public AudioClip thudSound;
    private AudioSource carAudio;
 
    void Start()
@@ -14,7 +15,7 @@ public class BumperFCollision : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {       
-        if(other.tag == "othercar")
+        if(other.tag == "othercar" || other.tag == "streetlight")
         {
             transform.localRotation = Quaternion.Euler(2.159f,-0.18f,-5.042f);
             float new_y = transform.localPosition.y - 0.05f;
@@ -24,7 +25,7 @@ public class BumperFCollision : MonoBehaviour
         }
         if(other.tag == "footpath")
         {
-            carAudio.PlayOneShot(crashSound, 1.0f);
+            carAudio.PlayOneShot(thudSound, 1.0f);
         }
     }
 

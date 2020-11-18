@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - othercar
+  - Fire
+  - footpath
+  - streetlight
   layers:
   - Default
   - TransparentFX

@@ -6,6 +6,7 @@ public class HoodCollision : MonoBehaviour
 {
    public ParticleSystem explosionParticle;
    public AudioClip crashSound;
+   public AudioClip thudSound;
    private AudioSource carAudio;
 
    void Start()
@@ -16,7 +17,7 @@ public class HoodCollision : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {       
-        if(other.tag == "othercar")
+        if(other.tag == "othercar" || other.tag == "streetlight")
         {
             transform.localRotation = Quaternion.Euler(-28.961f,0.002f,0f);
             float new_y = transform.localPosition.y - 0.51f;
@@ -27,28 +28,7 @@ public class HoodCollision : MonoBehaviour
         }
         if(other.tag == "footpath")
         {
-            carAudio.PlayOneShot(crashSound, 1.0f);
+            carAudio.PlayOneShot(thudSound, 1.0f);
         }
     }
-
-
-//    void OnCollisionEnter(Collision collisionInfo)
-//    {
-//        if(collisionInfo.collider.tag == "othercar")
-//        {
-//            explosionParticle.Play();
-//            Debug.Log("???????");
-           
-//        }
-//    }
-
-    // void OnCollisionEnter(Collision collision)
-    // {
-    //     print("outside if");
-    //     if(collision.collider.tag == "othercar")
-    //     {
-    //         print("inside if");
-    //         collision.transform.localRotation = Quaternion.Euler(-160f,0f,0f);
-    //     }
-    // }
 }

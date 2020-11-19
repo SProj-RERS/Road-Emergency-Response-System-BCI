@@ -72,6 +72,7 @@ crashlytics-build.properties
 
 #Visual Studio Code folder
 .vscode/*
+.vscode/
 !.vscode/settings.json
 !.vscode/tasks.json
 !.vscode/launch.json

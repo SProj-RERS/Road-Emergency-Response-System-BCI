@@ -21,7 +21,6 @@ public class BumperBCollision : MonoBehaviour
             float new_y = transform.localPosition.y - 0.05f;
             float new_x = transform.localPosition.x + 0.1f;
             transform.localPosition = new Vector3(new_x,new_y,0f);
-            Debug.Log("???????");
             carAudio.PlayOneShot(crashSound, 1.0f);
            
         }

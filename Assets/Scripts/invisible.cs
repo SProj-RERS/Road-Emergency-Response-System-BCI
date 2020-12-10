@@ -2,14 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ambulance : MonoBehaviour
+public class invisible : MonoBehaviour
 {
     // Start is called before the first frame update
-    Renderer mr;
+    Renderer rend;
     void Start()
     {
-        mr = GetComponent<Renderer>();
-        // print(mr);
+        rend = GetComponent<Renderer>();
+        rend.enabled = false;
     }
 
     // Update is called once per frame

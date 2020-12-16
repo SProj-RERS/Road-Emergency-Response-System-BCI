@@ -8,8 +8,8 @@ public class HoodCollision : MonoBehaviour
    public ParticleSystem explosionFire;
    public AudioClip crashSound;
    public AudioClip thudSound;
-   public int hit_count = 0;
    private AudioSource carAudio;
+   public int hits = 0;
 
    void Start()
    {
@@ -22,23 +22,28 @@ public class HoodCollision : MonoBehaviour
     {       
         if(other.tag == "othercar" || other.tag == "streetlight")
         {
-            if(hit_count == 8)
+            hits += 1;
+            
+            if(hits == 4)
             {
+                explosionSmoke.Stop();
                 explosionFire.Play();
             }
-            hit_count += 1;
-            print(hit_count);
+
+            else
+            {
+                explosionSmoke.Play();
+            }
+
             transform.localRotation = Quaternion.Euler(-28.961f,0.002f,0f);
             float new_y = transform.localPosition.y - 0.51f;
             float new_z = transform.localPosition.z + 0.45f;
             transform.localPosition = new Vector3(0f,new_y,new_z);
-            explosionSmoke.Play();
-            carAudio.PlayOneShot(crashSound, 1.0f);
+            carAudio.PlayOneShot(crashSound, 1.0f);  
         }
         if(other.tag == "footpath")
         {
             carAudio.PlayOneShot(thudSound, 1.0f);
         }
     }
-
 }

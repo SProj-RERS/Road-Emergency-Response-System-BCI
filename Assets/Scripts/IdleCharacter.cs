@@ -2,24 +2,22 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class StopCharacterMotion : MonoBehaviour
+public class IdleCharacter : MonoBehaviour
 {
-    private BetterWaypointFollower waypointscript;
     private Animator animation;
     private BoxCollider boxcollider;
+
     void Start()
     {
         boxcollider = GetComponent<BoxCollider>();
-        waypointscript = GetComponent<BetterWaypointFollower>();
         animation = GetComponent<Animator>();
     }
     void OnTriggerEnter(Collider collision)
    {
        if(collision.tag == "maincar")
        {
-            waypointscript.enabled = false;
-            boxcollider.enabled = false;
             animation.runtimeAnimatorController = Resources.Load("Death") as RuntimeAnimatorController; 
+            boxcollider.enabled = false;
             // animation.enabled = false;
        }
    }

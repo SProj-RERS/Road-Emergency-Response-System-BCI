@@ -2329,6 +2329,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ch07_nonPBR@Walking (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: bea1c426cc79dad4e9c0a1f527200856,
+        type: 3}
+      propertyPath: m_TagString
+      value: movingcharacter
+      objectReference: {fileID: 0}
     - target: {fileID: 1232242266760475175, guid: bea1c426cc79dad4e9c0a1f527200856,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3804,6 +3809,37 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4303498, guid: 8b2d47fdc2e25ac4f9721480a68bbefa, type: 3}
+--- !u!1 &293141508 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 2e2bb5f743fd34649b3f87d65b953a8b,
+    type: 3}
+  m_PrefabInstance: {fileID: 355569460}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &293141511
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 293141508}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.5, y: 1.75, z: 0.5}
+  m_Center: {x: 0, y: 0.9, z: 0}
+--- !u!114 &293141512
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 293141508}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f12b169689ac8bb42a73da65fc0dc25a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &299479651 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5039388261328084091, guid: 971408d0fabb489459792e05ac1b1077,
@@ -3898,32 +3934,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 325710123}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8eec78a53cddc2e48b352d3f824b44b2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  circuitObject: {fileID: 0}
-  circuit: {fileID: 0}
-  routeSpeed: 50
-  lookAheadDistance: 100
-  varyingSpeed: 0
-  initialSpeed: 0
-  rateOfChange: 1
-  waypointSpeedFactors: []
-  invokeMethods: 0
-  invokeWaypointEnabled: 
-  invokeNames: []
-  invokeDelay: []
-  invokeObject: []
---- !u!114 &325710127
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 325710123}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5a199ef517b61744dab47d711476770c, type: 3}
+  m_Script: {fileID: 11500000, guid: f12b169689ac8bb42a73da65fc0dc25a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &330669940
@@ -4026,7 +4037,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 656220a22809c3046ae707723b59b6ba,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -86.19328
+      value: 66.60671
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 656220a22809c3046ae707723b59b6ba,
         type: 3}
@@ -4036,7 +4047,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 656220a22809c3046ae707723b59b6ba,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 276.81967
+      value: 251.11966
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 656220a22809c3046ae707723b59b6ba,
         type: 3}
@@ -6257,7 +6268,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 2e2bb5f743fd34649b3f87d65b953a8b,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -67.2
+      value: 85.6
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 2e2bb5f743fd34649b3f87d65b953a8b,
         type: 3}
@@ -6267,7 +6278,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 2e2bb5f743fd34649b3f87d65b953a8b,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 271.6
+      value: 245.9
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 2e2bb5f743fd34649b3f87d65b953a8b,
         type: 3}
@@ -7924,34 +7935,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 360759118}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5a199ef517b61744dab47d711476770c, type: 3}
+  m_Script: {fileID: 11500000, guid: f12b169689ac8bb42a73da65fc0dc25a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &360759122
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 360759118}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8eec78a53cddc2e48b352d3f824b44b2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  circuitObject: {fileID: 0}
-  circuit: {fileID: 0}
-  routeSpeed: 50
-  lookAheadDistance: 100
-  varyingSpeed: 0
-  initialSpeed: 0
-  rateOfChange: 1
-  waypointSpeedFactors: []
-  invokeMethods: 0
-  invokeWaypointEnabled: 
-  invokeNames: []
-  invokeDelay: []
-  invokeObject: []
 --- !u!1001 &370815669
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15433,6 +15419,37 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!1 &689673094 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 656220a22809c3046ae707723b59b6ba,
+    type: 3}
+  m_PrefabInstance: {fileID: 330669940}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &689673097
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 689673094}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.5, y: 1.75, z: 0.5}
+  m_Center: {x: 0, y: 0.9, z: 0}
+--- !u!114 &689673098
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 689673094}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f12b169689ac8bb42a73da65fc0dc25a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &698825583 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7706620895717739915, guid: 971408d0fabb489459792e05ac1b1077,
@@ -19628,32 +19645,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1001139016}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8eec78a53cddc2e48b352d3f824b44b2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  circuitObject: {fileID: 0}
-  circuit: {fileID: 0}
-  routeSpeed: 50
-  lookAheadDistance: 100
-  varyingSpeed: 0
-  initialSpeed: 0
-  rateOfChange: 1
-  waypointSpeedFactors: []
-  invokeMethods: 0
-  invokeWaypointEnabled: 
-  invokeNames: []
-  invokeDelay: []
-  invokeObject: []
---- !u!114 &1001139020
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1001139016}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5a199ef517b61744dab47d711476770c, type: 3}
+  m_Script: {fileID: 11500000, guid: f12b169689ac8bb42a73da65fc0dc25a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1010763033 stripped
@@ -23274,6 +23266,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Ch31_nonPBR (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: bdabde894e694a841a86a55fb78a378d,
+        type: 3}
+      propertyPath: m_TagString
+      value: movingcharacter
       objectReference: {fileID: 0}
     - target: {fileID: 1448977649786777617, guid: bdabde894e694a841a86a55fb78a378d,
         type: 3}
@@ -29987,32 +29984,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1618357095}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8eec78a53cddc2e48b352d3f824b44b2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  circuitObject: {fileID: 0}
-  circuit: {fileID: 0}
-  routeSpeed: 50
-  lookAheadDistance: 100
-  varyingSpeed: 0
-  initialSpeed: 0
-  rateOfChange: 1
-  waypointSpeedFactors: []
-  invokeMethods: 0
-  invokeWaypointEnabled: 
-  invokeNames: []
-  invokeDelay: []
-  invokeObject: []
---- !u!114 &1618357097
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1618357095}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5a199ef517b61744dab47d711476770c, type: 3}
+  m_Script: {fileID: 11500000, guid: f12b169689ac8bb42a73da65fc0dc25a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!65 &1618357098
@@ -32837,34 +32809,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1788637123}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5a199ef517b61744dab47d711476770c, type: 3}
+  m_Script: {fileID: 11500000, guid: f12b169689ac8bb42a73da65fc0dc25a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1788637127
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1788637123}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8eec78a53cddc2e48b352d3f824b44b2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  circuitObject: {fileID: 0}
-  circuit: {fileID: 0}
-  routeSpeed: 50
-  lookAheadDistance: 100
-  varyingSpeed: 0
-  initialSpeed: 0
-  rateOfChange: 1
-  waypointSpeedFactors: []
-  invokeMethods: 0
-  invokeWaypointEnabled: 
-  invokeNames: []
-  invokeDelay: []
-  invokeObject: []
 --- !u!1 &1791688477 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8875332319056257770, guid: 5a2657325f8926b48a1fc34a04ef5509,
@@ -35896,34 +35843,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1946918582}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5a199ef517b61744dab47d711476770c, type: 3}
+  m_Script: {fileID: 11500000, guid: f12b169689ac8bb42a73da65fc0dc25a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1946918585
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1946918582}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8eec78a53cddc2e48b352d3f824b44b2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  circuitObject: {fileID: 0}
-  circuit: {fileID: 0}
-  routeSpeed: 50
-  lookAheadDistance: 100
-  varyingSpeed: 0
-  initialSpeed: 0
-  rateOfChange: 1
-  waypointSpeedFactors: []
-  invokeMethods: 0
-  invokeWaypointEnabled: 
-  invokeNames: []
-  invokeDelay: []
-  invokeObject: []
 --- !u!1 &1949571301 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -5222831098691565772, guid: 971408d0fabb489459792e05ac1b1077,
@@ -38308,6 +38230,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Ch22_nonPBR@Talking (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 396a66d2e54d31f44822f6e2fcb5b633,
+        type: 3}
+      propertyPath: m_TagString
+      value: movingcharacter
       objectReference: {fileID: 0}
     - target: {fileID: 1196217696672835772, guid: 396a66d2e54d31f44822f6e2fcb5b633,
         type: 3}

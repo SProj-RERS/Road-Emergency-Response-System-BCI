@@ -9,6 +9,7 @@ TagManager:
   - footpath
   - streetlight
   - maincar
+  - movingcharacter
   layers:
   - Default
   - TransparentFX

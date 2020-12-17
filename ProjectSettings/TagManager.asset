@@ -8,6 +8,7 @@ TagManager:
   - Fire
   - footpath
   - streetlight
+  - maincar
   layers:
   - Default
   - TransparentFX

@@ -7431,7 +7431,7 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 179819863}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &478706557
+--- !u!114 &478706556
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -7440,17 +7440,47 @@ MonoBehaviour:
   m_GameObject: {fileID: 478706555}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c5cb22d331ef7d64796f917c6a455a32, type: 3}
+  m_Script: {fileID: 11500000, guid: 8eec78a53cddc2e48b352d3f824b44b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  circuitObject: {fileID: 1216508319}
   circuit: {fileID: 1216508319}
-  lookAheadForTargetOffset: 1
-  lookAheadForTargetFactor: 0.1
-  lookAheadForSpeedOffset: 1
-  lookAheadForSpeedFactor: 0.2
-  progressStyle: 0
-  pointToPointThreshold: 4
-  target: {fileID: 1622917586}
+  routeSpeed: 10
+  lookAheadDistance: 100
+  varyingSpeed: 0
+  initialSpeed: 0
+  rateOfChange: 1
+  waypointSpeedFactors: []
+  invokeMethods: 0
+  invokeWaypointEnabled: 
+  invokeNames: []
+  invokeDelay: []
+  invokeObject: []
+--- !u!65 &478706557
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 478706555}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.5, y: 1.75, z: 0.5}
+  m_Center: {x: 0, y: 0.9, z: 0}
+--- !u!114 &478706558
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 478706555}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a199ef517b61744dab47d711476770c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &480633908
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7692,6 +7722,36 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1131143998}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &507110404
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 507110403}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8eec78a53cddc2e48b352d3f824b44b2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  circuitObject: {fileID: 1216508319}
+  circuit: {fileID: 1216508319}
+  routeSpeed: 15
+  lookAheadDistance: 100
+  varyingSpeed: 0
+  initialSpeed: 15
+  rateOfChange: 1
+  waypointSpeedFactors:
+  - 1
+  - 1
+  - 1
+  - 1
+  - 1
+  invokeMethods: 0
+  invokeWaypointEnabled: 
+  invokeNames: []
+  invokeDelay: []
+  invokeObject: []
 --- !u!114 &507110405
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7701,17 +7761,22 @@ MonoBehaviour:
   m_GameObject: {fileID: 507110403}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c5cb22d331ef7d64796f917c6a455a32, type: 3}
+  m_Script: {fileID: 11500000, guid: 5a199ef517b61744dab47d711476770c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  circuit: {fileID: 1216508319}
-  lookAheadForTargetOffset: 1
-  lookAheadForTargetFactor: 0.1
-  lookAheadForSpeedOffset: 1
-  lookAheadForSpeedFactor: 0.2
-  progressStyle: 0
-  pointToPointThreshold: 4
-  target: {fileID: 589900018}
+--- !u!65 &507110406
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 507110403}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.5, y: 1.75, z: 0.5}
+  m_Center: {x: 0, y: 0.9, z: 0}
 --- !u!1001 &508925885
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -32952,7 +33017,7 @@ GameObject:
   - component: {fileID: 738062564}
   m_Layer: 0
   m_Name: MainCar
-  m_TagString: Untagged
+  m_TagString: maincar
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

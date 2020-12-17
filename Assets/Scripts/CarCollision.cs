@@ -14,8 +14,6 @@ public class CarCollision : MonoBehaviour
        if(collisionInfo.collider.name == "WoodCrate")
        {
            explosionParticle.Play();
-           Debug.Log("???????");
-           
        }
    }
 }

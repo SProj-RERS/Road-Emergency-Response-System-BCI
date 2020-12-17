@@ -139,7 +139,7 @@ GameObject:
   - component: {fileID: 31825138}
   m_Layer: 0
   m_Name: BR
-  m_TagString: Untagged
+  m_TagString: maincar
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5025,7 +5025,7 @@ GameObject:
   - component: {fileID: 332923865}
   m_Layer: 0
   m_Name: FL
-  m_TagString: Untagged
+  m_TagString: maincar
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7445,7 +7445,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   circuitObject: {fileID: 1216508319}
   circuit: {fileID: 1216508319}
-  routeSpeed: 10
+  routeSpeed: 50
   lookAheadDistance: 100
   varyingSpeed: 0
   initialSpeed: 0
@@ -7736,7 +7736,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   circuitObject: {fileID: 1216508319}
   circuit: {fileID: 1216508319}
-  routeSpeed: 15
+  routeSpeed: 45
   lookAheadDistance: 100
   varyingSpeed: 0
   initialSpeed: 15
@@ -14479,7 +14479,7 @@ GameObject:
   - component: {fileID: 888974873}
   m_Layer: 0
   m_Name: FR
-  m_TagString: Untagged
+  m_TagString: maincar
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -23731,7 +23731,7 @@ GameObject:
   - component: {fileID: 1367188694}
   m_Layer: 0
   m_Name: BL
-  m_TagString: Untagged
+  m_TagString: maincar
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -32306,7 +32306,7 @@ GameObject:
   - component: {fileID: 1057241802610666}
   m_Layer: 0
   m_Name: Tocus_Bamper_Back
-  m_TagString: Untagged
+  m_TagString: maincar
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -32542,7 +32542,7 @@ GameObject:
   - component: {fileID: 1196723168266947}
   m_Layer: 0
   m_Name: Tocus_Hood_Front
-  m_TagString: Untagged
+  m_TagString: maincar
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -32747,7 +32747,7 @@ GameObject:
   - component: {fileID: 1286566107167136}
   m_Layer: 0
   m_Name: Tocus_Door_Left_Back
-  m_TagString: Untagged
+  m_TagString: maincar
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -33056,7 +33056,7 @@ GameObject:
   - component: {fileID: 1702960936143108}
   m_Layer: 0
   m_Name: Tocus_Door_Right_Front
-  m_TagString: Untagged
+  m_TagString: maincar
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -33271,7 +33271,7 @@ GameObject:
   - component: {fileID: 1740877419545618}
   m_Layer: 0
   m_Name: Tocus_Door_Left_Front
-  m_TagString: Untagged
+  m_TagString: maincar
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -33451,7 +33451,7 @@ GameObject:
   - component: {fileID: 1859606559412792}
   m_Layer: 0
   m_Name: Tocus_Door_Right_Back
-  m_TagString: Untagged
+  m_TagString: maincar
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -33595,7 +33595,7 @@ GameObject:
   - component: {fileID: 1884717175802414}
   m_Layer: 0
   m_Name: Tocus_Bamper_Front
-  m_TagString: Untagged
+  m_TagString: maincar
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

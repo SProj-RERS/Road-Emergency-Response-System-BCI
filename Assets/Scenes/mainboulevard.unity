@@ -21829,7 +21829,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1092718570}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 489.2, y: -1.6, z: -13.4}
+  m_LocalPosition: {x: 489.2, y: 8, z: -13.4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 740294920}
@@ -32865,22 +32865,6 @@ MonoBehaviour:
   invokeNames: []
   invokeDelay: []
   invokeObject: []
---- !u!54 &1788637129
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1788637123}
-  serializedVersion: 2
-  m_Mass: 3
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!1 &1791688477 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8875332319056257770, guid: 5a2657325f8926b48a1fc34a04ef5509,

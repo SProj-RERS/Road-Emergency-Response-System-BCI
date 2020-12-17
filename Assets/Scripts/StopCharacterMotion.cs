@@ -16,7 +16,7 @@ public class StopCharacterMotion : MonoBehaviour
        if(collision.tag == "maincar")
        {
             waypointscript.enabled = false;
-            animation.runtimeAnimatorController = Resources.Load("Death") as RuntimeAnimatorController;
+            animation.runtimeAnimatorController = Resources.Load("Death") as RuntimeAnimatorController; 
             // animation.enabled = false;
        }
    }

@@ -47,5 +47,7 @@ public class StopCharacterMotion : MonoBehaviour
                 // ambulance.position = Vector3.MoveTowards(ambulance.position,character.position,speed * Time.deltaTime);
             }
        }
-   }
+
+  
+    }
 }

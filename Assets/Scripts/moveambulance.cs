@@ -23,10 +23,10 @@ public class moveambulance : MonoBehaviour
         //  transform.Translate(Vector3.forward * speed * Time.deltaTime);
         // print(maincar.position);
         speed = 100;
-       new_x = (1)*maincar.position.x;
+       new_x = (1)*maincar.position.x-30f;
        print(maincar.position.x);
-       new_z = (1)*maincar.position.z;
-       new_y = maincar.position.y;
-       transform.position = Vector3.MoveTowards(transform.position, new Vector3(new_x, 0, new_z), speed * Time.deltaTime);
+       new_z = (1)*maincar.position.z-20f;
+    //    new_y = maincar.position.y+30f;
+       transform.position = Vector3.MoveTowards(transform.position, new Vector3(new_x, transform.position.y, transform.position.z), speed * Time.deltaTime);
     }
 }

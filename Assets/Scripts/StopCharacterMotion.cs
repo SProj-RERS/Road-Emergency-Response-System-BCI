@@ -38,12 +38,12 @@ public class StopCharacterMotion : MonoBehaviour
 
             if(character.position.z > 490f)
             {
-                Instantiate(ambulance,new Vector3(-583f,35.7f,603.8f),Quaternion.Euler(0,90,0));
+                Instantiate(ambulance,new Vector3(-583f,10.8f,603.8f),Quaternion.Euler(0,90,0));
                 // ambulance.position = Vector3.MoveTowards(ambulance.position,character.position,speed * Time.deltaTime);
             }
             if(character.position.z < 405f)
             {
-                Instantiate(ambulance,new Vector3(779f,35.7f,331f),Quaternion.Euler(0,270,0));
+                Instantiate(ambulance,new Vector3(779f,10.8f,331f),Quaternion.Euler(0,270,0));
                 // ambulance.position = Vector3.MoveTowards(ambulance.position,character.position,speed * Time.deltaTime);
             }
        }

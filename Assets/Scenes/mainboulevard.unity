@@ -22002,6 +22002,12 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4303498, guid: 8b2d47fdc2e25ac4f9721480a68bbefa, type: 3}
+--- !u!198 &1383784355 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 8341111546597402050, guid: c01dbb5a0a6f1a24d8fdcb41541e497e,
+    type: 3}
+  m_PrefabInstance: {fileID: 3857337438922775769}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1403129988 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -5399197473261643064, guid: 971408d0fabb489459792e05ac1b1077,
@@ -34044,10 +34050,35 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5832539332421448073, guid: c01dbb5a0a6f1a24d8fdcb41541e497e,
+        type: 3}
+      propertyPath: explosionFire
+      value: 
+      objectReference: {fileID: 1383784355}
     - target: {fileID: 5833550311010984516, guid: c01dbb5a0a6f1a24d8fdcb41541e497e,
         type: 3}
       propertyPath: m_Name
       value: MainCar
+      objectReference: {fileID: 0}
+    - target: {fileID: 5833595242486582188, guid: c01dbb5a0a6f1a24d8fdcb41541e497e,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 0.66430646
+      objectReference: {fileID: 0}
+    - target: {fileID: 5833595242486582188, guid: c01dbb5a0a6f1a24d8fdcb41541e497e,
+        type: 3}
+      propertyPath: m_Size.z
+      value: 0.32906753
+      objectReference: {fileID: 0}
+    - target: {fileID: 5833595242486582188, guid: c01dbb5a0a6f1a24d8fdcb41541e497e,
+        type: 3}
+      propertyPath: m_Center.x
+      value: -0.0033833752
+      objectReference: {fileID: 0}
+    - target: {fileID: 5833595242486582188, guid: c01dbb5a0a6f1a24d8fdcb41541e497e,
+        type: 3}
+      propertyPath: m_Center.y
+      value: 0.30960977
       objectReference: {fileID: 0}
     - target: {fileID: 5833595242486582189, guid: c01dbb5a0a6f1a24d8fdcb41541e497e,
         type: 3}
@@ -34063,7 +34094,7 @@ PrefabInstance:
     - target: {fileID: 5836408109611268238, guid: c01dbb5a0a6f1a24d8fdcb41541e497e,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 37.2
+      value: 39.5
       objectReference: {fileID: 0}
     - target: {fileID: 5836408109611268238, guid: c01dbb5a0a6f1a24d8fdcb41541e497e,
         type: 3}
@@ -34113,6 +34144,11 @@ PrefabInstance:
     - target: {fileID: 5882520681363341498, guid: c01dbb5a0a6f1a24d8fdcb41541e497e,
         type: 3}
       propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8341111546597402050, guid: c01dbb5a0a6f1a24d8fdcb41541e497e,
+        type: 3}
+      propertyPath: prewarm
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:

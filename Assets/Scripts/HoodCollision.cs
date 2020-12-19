@@ -11,6 +11,7 @@ public class HoodCollision : MonoBehaviour
    public AudioClip thudSound;
    private AudioSource carAudio;
    public int hits = 0;
+   public GameObject firetruck;
 
    void Start()
    {
@@ -33,6 +34,16 @@ public class HoodCollision : MonoBehaviour
                print(hits);
                 explosionSmoke.Stop();
                 explosionFire.Play();
+                 if(transform.position.z > 490f)
+            {
+                Instantiate(firetruck,new Vector3(-583f,17.4f,603.8f),Quaternion.Euler(0,90,0));
+                // firetruck.position = Vector3.MoveTowards(firetruck.position,character.position,speed * Time.deltaTime);
+            }
+            if(transform.position.z < 405f)
+            {
+                Instantiate(firetruck,new Vector3(779f,17.4f,331f),Quaternion.Euler(0,270,0));
+                // firetruck.position = Vector3.MoveTowards(firetruck.position,character.position,speed * Time.deltaTime);
+            }
             }
           
 

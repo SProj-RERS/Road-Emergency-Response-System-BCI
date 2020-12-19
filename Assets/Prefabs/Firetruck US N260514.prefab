@@ -1197,6 +1197,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9086543252664775266}
+  - component: {fileID: 3832042274905100900}
   m_Layer: 0
   m_Name: Firetruck US N260514
   m_TagString: Untagged
@@ -1219,6 +1220,23 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3832042274905100900
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8453874832017074392}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 77716c30e8be524478b638bc8b32817c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maincar: {fileID: 618522401598142348, guid: b24614913793cc547aa2623793d4b5e2, type: 3}
+  speed: 0
+  new_x: 0
+  new_z: 0
+  new_y: 0
 --- !u!1 &8637661223806253656
 GameObject:
   m_ObjectHideFlags: 0

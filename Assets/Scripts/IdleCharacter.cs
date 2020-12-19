@@ -55,11 +55,23 @@ public class IdleCharacter : MonoBehaviour
         {
             othercharacters = GameObject.FindGameObjectsWithTag("character");
             int i = 0;
+            int j = 0;
             foreach (GameObject person in othercharacters)
             {
-                // person.transform.position = new Vector3(0,0,0);
-                person.transform.position = Vector3.MoveTowards(person.transform.position, new Vector3(transform.position.x+i,transform.position.y,transform.position.z+i), 50 * Time.deltaTime);
+                Animator person_animation;
+                person_animation = person.GetComponent<Animator>();
+                person.transform.LookAt(transform.position);
+                person_animation.runtimeAnimatorController = Resources.Load("Running") as RuntimeAnimatorController;
+                Vector3 new_position = new Vector3(transform.position.x+i,transform.position.y,transform.position.z+j);
+                person.transform.position = Vector3.MoveTowards(person.transform.position, new_position, 50 * Time.deltaTime);
                 i += 5;
+                j += 3;
+                if(person.transform.position == new_position)
+                {
+                    person_animation = person.GetComponent<Animator>();
+                    person_animation.runtimeAnimatorController = Resources.Load("Idle") as RuntimeAnimatorController;
+                }
+                
             }
         }
     }

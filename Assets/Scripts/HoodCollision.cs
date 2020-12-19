@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class HoodCollision : MonoBehaviour
 {
    public ParticleSystem explosionSmoke;
@@ -20,20 +21,20 @@ public class HoodCollision : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {       
+        
+        // print("????????????");
         if(other.tag == "othercar" || other.tag == "streetlight")
         {
-            hits += 1;
+            hits +=1;
+            explosionSmoke.Play();
             
-            if(hits == 4)
-            {
+           if(hits == 3)
+           {
+               print(hits);
                 explosionSmoke.Stop();
                 explosionFire.Play();
             }
-
-            else
-            {
-                explosionSmoke.Play();
-            }
+          
 
             transform.localRotation = Quaternion.Euler(-28.961f,0.002f,0f);
             float new_y = transform.localPosition.y - 0.51f;

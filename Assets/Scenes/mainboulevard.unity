@@ -3753,6 +3753,12 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 355569460}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &293141510 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 2e2bb5f743fd34649b3f87d65b953a8b,
+    type: 3}
+  m_PrefabInstance: {fileID: 355569460}
+  m_PrefabAsset: {fileID: 0}
 --- !u!65 &293141511
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3778,6 +3784,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f12b169689ac8bb42a73da65fc0dc25a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  character: {fileID: 293141510}
+  blood1: {fileID: 100000, guid: 358b75ea5451cf143ab19029a189097d, type: 3}
+  blood2: {fileID: 100000, guid: 18a11fd6df8ceb449b8785301026d639, type: 3}
+  ambulance: {fileID: 2906042068397455303, guid: cf44d00cd485fc44889e50d96302d244,
+    type: 3}
 --- !u!1 &299479651 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5039388261328084091, guid: 971408d0fabb489459792e05ac1b1077,
@@ -3875,6 +3886,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f12b169689ac8bb42a73da65fc0dc25a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  character: {fileID: 325710127}
+  blood1: {fileID: 100000, guid: 358b75ea5451cf143ab19029a189097d, type: 3}
+  blood2: {fileID: 100000, guid: 18a11fd6df8ceb449b8785301026d639, type: 3}
+  ambulance: {fileID: 2906042068397455303, guid: cf44d00cd485fc44889e50d96302d244,
+    type: 3}
+--- !u!4 &325710127 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: ee021906f5abb5a4c8403ffe187ddeb4,
+    type: 3}
+  m_PrefabInstance: {fileID: 1043845481}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &330669940
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7814,6 +7836,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f12b169689ac8bb42a73da65fc0dc25a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  character: {fileID: 360759122}
+  blood1: {fileID: 100000, guid: 358b75ea5451cf143ab19029a189097d, type: 3}
+  blood2: {fileID: 100000, guid: 18a11fd6df8ceb449b8785301026d639, type: 3}
+  ambulance: {fileID: 2906042068397455303, guid: cf44d00cd485fc44889e50d96302d244,
+    type: 3}
+--- !u!4 &360759122 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 396a66d2e54d31f44822f6e2fcb5b633,
+    type: 3}
+  m_PrefabInstance: {fileID: 1895316833}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &370815669
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8586,7 +8619,7 @@ MonoBehaviour:
   character: {fileID: 1622917586}
   blood1: {fileID: 7405530659694552770, guid: e55fc288dfff33d408c2df8c6706eb4d, type: 3}
   blood2: {fileID: 5125221336906641272, guid: 255d5eea8cab19d469dfc5885df087e3, type: 3}
-  ambulance: {fileID: 8916300858459874645, guid: 880e0277dd70f5b46878a703f9dd0ec6,
+  ambulance: {fileID: 2906042068397455303, guid: cf44d00cd485fc44889e50d96302d244,
     type: 3}
 --- !u!1001 &480633908
 PrefabInstance:
@@ -8914,7 +8947,7 @@ MonoBehaviour:
   character: {fileID: 589900018}
   blood1: {fileID: 7405530659694552770, guid: e55fc288dfff33d408c2df8c6706eb4d, type: 3}
   blood2: {fileID: 5125221336906641272, guid: 255d5eea8cab19d469dfc5885df087e3, type: 3}
-  ambulance: {fileID: 8916300858459874645, guid: 880e0277dd70f5b46878a703f9dd0ec6,
+  ambulance: {fileID: 2906042068397455303, guid: cf44d00cd485fc44889e50d96302d244,
     type: 3}
 --- !u!65 &507110406
 BoxCollider:
@@ -10666,6 +10699,12 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 330669940}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &689673096 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 656220a22809c3046ae707723b59b6ba,
+    type: 3}
+  m_PrefabInstance: {fileID: 330669940}
+  m_PrefabAsset: {fileID: 0}
 --- !u!65 &689673097
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10691,6 +10730,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f12b169689ac8bb42a73da65fc0dc25a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  character: {fileID: 689673096}
+  blood1: {fileID: 100000, guid: 358b75ea5451cf143ab19029a189097d, type: 3}
+  blood2: {fileID: 100000, guid: 18a11fd6df8ceb449b8785301026d639, type: 3}
+  ambulance: {fileID: 2906042068397455303, guid: cf44d00cd485fc44889e50d96302d244,
+    type: 3}
 --- !u!1 &698825583 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7706620895717739915, guid: 971408d0fabb489459792e05ac1b1077,
@@ -14671,6 +14715,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f12b169689ac8bb42a73da65fc0dc25a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  character: {fileID: 1001139020}
+  blood1: {fileID: 100000, guid: 358b75ea5451cf143ab19029a189097d, type: 3}
+  blood2: {fileID: 100000, guid: 18a11fd6df8ceb449b8785301026d639, type: 3}
+  ambulance: {fileID: 2906042068397455303, guid: cf44d00cd485fc44889e50d96302d244,
+    type: 3}
+--- !u!4 &1001139020 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 396a66d2e54d31f44822f6e2fcb5b633,
+    type: 3}
+  m_PrefabInstance: {fileID: 1599100386}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1010763033 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2912141821195828050, guid: 971408d0fabb489459792e05ac1b1077,
@@ -22970,10 +23025,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a199ef517b61744dab47d711476770c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  character: {fileID: 0}
-  blood1: {fileID: 0}
-  blood2: {fileID: 0}
-  ambulance: {fileID: 0}
+  character: {fileID: 1595563687}
+  blood1: {fileID: 100000, guid: 358b75ea5451cf143ab19029a189097d, type: 3}
+  blood2: {fileID: 100000, guid: 18a11fd6df8ceb449b8785301026d639, type: 3}
+  ambulance: {fileID: 2906042068397455303, guid: cf44d00cd485fc44889e50d96302d244,
+    type: 3}
 --- !u!114 &1595563686
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22999,6 +23055,12 @@ MonoBehaviour:
   invokeNames: []
   invokeDelay: []
   invokeObject: []
+--- !u!4 &1595563687 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 396a66d2e54d31f44822f6e2fcb5b633,
+    type: 3}
+  m_PrefabInstance: {fileID: 2121927280}
+  m_PrefabAsset: {fileID: 0}
 --- !u!65 &1595563688
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -24958,6 +25020,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f12b169689ac8bb42a73da65fc0dc25a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  character: {fileID: 1618357099}
+  blood1: {fileID: 100000, guid: 358b75ea5451cf143ab19029a189097d, type: 3}
+  blood2: {fileID: 100000, guid: 18a11fd6df8ceb449b8785301026d639, type: 3}
+  ambulance: {fileID: 2906042068397455303, guid: cf44d00cd485fc44889e50d96302d244,
+    type: 3}
 --- !u!65 &1618357098
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -24971,6 +25038,12 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.5, y: 1.75, z: 0.5}
   m_Center: {x: 0, y: 0.9, z: 0}
+--- !u!4 &1618357099 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: ee021906f5abb5a4c8403ffe187ddeb4,
+    type: 3}
+  m_PrefabInstance: {fileID: 894992608}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1622917586 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: bea1c426cc79dad4e9c0a1f527200856,
@@ -27753,6 +27826,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f12b169689ac8bb42a73da65fc0dc25a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  character: {fileID: 1788637127}
+  blood1: {fileID: 100000, guid: 358b75ea5451cf143ab19029a189097d, type: 3}
+  blood2: {fileID: 100000, guid: 18a11fd6df8ceb449b8785301026d639, type: 3}
+  ambulance: {fileID: 2906042068397455303, guid: cf44d00cd485fc44889e50d96302d244,
+    type: 3}
+--- !u!4 &1788637127 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 5aa7d1f6ce5e33248bb2495ef43ff17e,
+    type: 3}
+  m_PrefabInstance: {fileID: 1719445085}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1791688477 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8875332319056257770, guid: 5a2657325f8926b48a1fc34a04ef5509,
@@ -30787,6 +30871,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f12b169689ac8bb42a73da65fc0dc25a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  character: {fileID: 1946918586}
+  blood1: {fileID: 100000, guid: 358b75ea5451cf143ab19029a189097d, type: 3}
+  blood2: {fileID: 100000, guid: 18a11fd6df8ceb449b8785301026d639, type: 3}
+  ambulance: {fileID: 2906042068397455303, guid: cf44d00cd485fc44889e50d96302d244,
+    type: 3}
+--- !u!4 &1946918586 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 396a66d2e54d31f44822f6e2fcb5b633,
+    type: 3}
+  m_PrefabInstance: {fileID: 1345466862}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1949571301 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -5222831098691565772, guid: 971408d0fabb489459792e05ac1b1077,
@@ -34100,7 +34195,7 @@ PrefabInstance:
     - target: {fileID: 5836408109611268238, guid: c01dbb5a0a6f1a24d8fdcb41541e497e,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 39.5
+      value: 160.1
       objectReference: {fileID: 0}
     - target: {fileID: 5836408109611268238, guid: c01dbb5a0a6f1a24d8fdcb41541e497e,
         type: 3}
@@ -34110,7 +34205,7 @@ PrefabInstance:
     - target: {fileID: 5836408109611268238, guid: c01dbb5a0a6f1a24d8fdcb41541e497e,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 529
+      value: 730
       objectReference: {fileID: 0}
     - target: {fileID: 5836408109611268238, guid: c01dbb5a0a6f1a24d8fdcb41541e497e,
         type: 3}
@@ -34315,6 +34410,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 8737606102627555714, guid: 559c7157ae374b84193278de34e24f85,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8737606102627555717, guid: 559c7157ae374b84193278de34e24f85,
         type: 3}
       propertyPath: m_RootOrder

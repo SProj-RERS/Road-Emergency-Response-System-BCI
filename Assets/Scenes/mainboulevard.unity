@@ -3789,6 +3789,8 @@ MonoBehaviour:
   blood2: {fileID: 100000, guid: 18a11fd6df8ceb449b8785301026d639, type: 3}
   ambulance: {fileID: 2906042068397455303, guid: cf44d00cd485fc44889e50d96302d244,
     type: 3}
+  othercharacters: []
+  dead: 0
 --- !u!1 &299479651 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5039388261328084091, guid: 971408d0fabb489459792e05ac1b1077,
@@ -3891,6 +3893,8 @@ MonoBehaviour:
   blood2: {fileID: 100000, guid: 18a11fd6df8ceb449b8785301026d639, type: 3}
   ambulance: {fileID: 2906042068397455303, guid: cf44d00cd485fc44889e50d96302d244,
     type: 3}
+  othercharacters: []
+  dead: 0
 --- !u!4 &325710127 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: ee021906f5abb5a4c8403ffe187ddeb4,
@@ -5128,6 +5132,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Ch08_nonPBR (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 656220a22809c3046ae707723b59b6ba,
+        type: 3}
+      propertyPath: m_TagString
+      value: character
       objectReference: {fileID: 0}
     - target: {fileID: 1084884740351611579, guid: 656220a22809c3046ae707723b59b6ba,
         type: 3}
@@ -7053,6 +7062,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ch26_nonPBR@Idle (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 2e2bb5f743fd34649b3f87d65b953a8b,
+        type: 3}
+      propertyPath: m_TagString
+      value: character
+      objectReference: {fileID: 0}
     - target: {fileID: 1017971965920130908, guid: 2e2bb5f743fd34649b3f87d65b953a8b,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -7841,6 +7855,8 @@ MonoBehaviour:
   blood2: {fileID: 100000, guid: 18a11fd6df8ceb449b8785301026d639, type: 3}
   ambulance: {fileID: 2906042068397455303, guid: cf44d00cd485fc44889e50d96302d244,
     type: 3}
+  othercharacters: []
+  dead: 0
 --- !u!4 &360759122 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 396a66d2e54d31f44822f6e2fcb5b633,
@@ -10735,6 +10751,8 @@ MonoBehaviour:
   blood2: {fileID: 100000, guid: 18a11fd6df8ceb449b8785301026d639, type: 3}
   ambulance: {fileID: 2906042068397455303, guid: cf44d00cd485fc44889e50d96302d244,
     type: 3}
+  othercharacters: []
+  dead: 0
 --- !u!1 &698825583 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7706620895717739915, guid: 971408d0fabb489459792e05ac1b1077,
@@ -12841,6 +12859,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ch42_nonPBR (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: ee021906f5abb5a4c8403ffe187ddeb4,
+        type: 3}
+      propertyPath: m_TagString
+      value: character
+      objectReference: {fileID: 0}
     - target: {fileID: 1092408308860062549, guid: ee021906f5abb5a4c8403ffe187ddeb4,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -14720,6 +14743,8 @@ MonoBehaviour:
   blood2: {fileID: 100000, guid: 18a11fd6df8ceb449b8785301026d639, type: 3}
   ambulance: {fileID: 2906042068397455303, guid: cf44d00cd485fc44889e50d96302d244,
     type: 3}
+  othercharacters: []
+  dead: 0
 --- !u!4 &1001139020 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 396a66d2e54d31f44822f6e2fcb5b633,
@@ -15806,6 +15831,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Ch42_nonPBR
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: ee021906f5abb5a4c8403ffe187ddeb4,
+        type: 3}
+      propertyPath: m_TagString
+      value: character
       objectReference: {fileID: 0}
     - target: {fileID: 1092408308860062549, guid: ee021906f5abb5a4c8403ffe187ddeb4,
         type: 3}
@@ -17005,7 +17035,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1111076702}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -213, y: 0.972, z: 562}
+  m_LocalPosition: {x: -213, y: 0.97204, z: 562}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1000172032}
@@ -21255,6 +21285,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ch22_nonPBR@Talking (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 396a66d2e54d31f44822f6e2fcb5b633,
+        type: 3}
+      propertyPath: m_TagString
+      value: character
+      objectReference: {fileID: 0}
     - target: {fileID: 1196217696672835772, guid: 396a66d2e54d31f44822f6e2fcb5b633,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -24301,6 +24336,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ch22_nonPBR@Talking
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 396a66d2e54d31f44822f6e2fcb5b633,
+        type: 3}
+      propertyPath: m_TagString
+      value: character
+      objectReference: {fileID: 0}
     - target: {fileID: 1196217696672835772, guid: 396a66d2e54d31f44822f6e2fcb5b633,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -25025,6 +25065,8 @@ MonoBehaviour:
   blood2: {fileID: 100000, guid: 18a11fd6df8ceb449b8785301026d639, type: 3}
   ambulance: {fileID: 2906042068397455303, guid: cf44d00cd485fc44889e50d96302d244,
     type: 3}
+  othercharacters: []
+  dead: 0
 --- !u!65 &1618357098
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -26840,6 +26882,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ch33_nonPBR
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 5aa7d1f6ce5e33248bb2495ef43ff17e,
+        type: 3}
+      propertyPath: m_TagString
+      value: character
+      objectReference: {fileID: 0}
     - target: {fileID: 1084884740351611579, guid: 5aa7d1f6ce5e33248bb2495ef43ff17e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -27831,6 +27878,8 @@ MonoBehaviour:
   blood2: {fileID: 100000, guid: 18a11fd6df8ceb449b8785301026d639, type: 3}
   ambulance: {fileID: 2906042068397455303, guid: cf44d00cd485fc44889e50d96302d244,
     type: 3}
+  othercharacters: []
+  dead: 0
 --- !u!4 &1788637127 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 5aa7d1f6ce5e33248bb2495ef43ff17e,
@@ -29880,6 +29929,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ch22_nonPBR@Talking (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 396a66d2e54d31f44822f6e2fcb5b633,
+        type: 3}
+      propertyPath: m_TagString
+      value: character
+      objectReference: {fileID: 0}
     - target: {fileID: 1196217696672835772, guid: 396a66d2e54d31f44822f6e2fcb5b633,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -30876,6 +30930,8 @@ MonoBehaviour:
   blood2: {fileID: 100000, guid: 18a11fd6df8ceb449b8785301026d639, type: 3}
   ambulance: {fileID: 2906042068397455303, guid: cf44d00cd485fc44889e50d96302d244,
     type: 3}
+  othercharacters: []
+  dead: 0
 --- !u!4 &1946918586 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 396a66d2e54d31f44822f6e2fcb5b633,

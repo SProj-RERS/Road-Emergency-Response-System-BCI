@@ -10,6 +10,8 @@ public class IdleCharacter : MonoBehaviour
     public GameObject blood1;
     public GameObject blood2;
     public GameObject ambulance;
+    public GameObject[] othercharacters;
+    public int dead = 0;
 
     void Start()
     {
@@ -21,6 +23,7 @@ public class IdleCharacter : MonoBehaviour
     {
        if(collision.tag == "maincar")
        {
+            gameObject.tag = "deadcharacter";
             boxcollider.enabled = false;
             animation.runtimeAnimatorController = Resources.Load("Death") as RuntimeAnimatorController; 
 
@@ -42,8 +45,22 @@ public class IdleCharacter : MonoBehaviour
             {
                 Instantiate(ambulance,new Vector3(779f,10.8f,331f),Quaternion.Euler(0,270,0));
             }
+            dead = 1;
        }
-
   
+    }
+    void Update()
+    {
+        if(dead == 1)
+        {
+            othercharacters = GameObject.FindGameObjectsWithTag("character");
+            int i = 0;
+            foreach (GameObject person in othercharacters)
+            {
+                // person.transform.position = new Vector3(0,0,0);
+                person.transform.position = Vector3.MoveTowards(person.transform.position, new Vector3(transform.position.x+i,transform.position.y,transform.position.z+i), 50 * Time.deltaTime);
+                i += 5;
+            }
+        }
     }
 }

@@ -34412,9 +34412,24 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8737606102627555714, guid: 559c7157ae374b84193278de34e24f85,
         type: 3}
-      propertyPath: m_Enabled
-      value: 0
+      propertyPath: Loop
+      value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8737606102627555714, guid: 559c7157ae374b84193278de34e24f85,
+        type: 3}
+      propertyPath: m_Volume
+      value: 0.387
+      objectReference: {fileID: 0}
+    - target: {fileID: 8737606102627555714, guid: 559c7157ae374b84193278de34e24f85,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8737606102627555714, guid: 559c7157ae374b84193278de34e24f85,
+        type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 3d8ae51e181cbf44c932caf359e04b47, type: 3}
     - target: {fileID: 8737606102627555717, guid: 559c7157ae374b84193278de34e24f85,
         type: 3}
       propertyPath: m_RootOrder

@@ -34086,6 +34086,12 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 8453874832017074392, guid: 7584fbdd95b651d4da1f29ca87bb27dd,
         type: 3}
+    - target: {fileID: 5833595242486582189, guid: c01dbb5a0a6f1a24d8fdcb41541e497e,
+        type: 3}
+      propertyPath: firetruck
+      value: 
+      objectReference: {fileID: 8453874832017074392, guid: 7584fbdd95b651d4da1f29ca87bb27dd,
+        type: 3}
     - target: {fileID: 5836408109611268238, guid: c01dbb5a0a6f1a24d8fdcb41541e497e,
         type: 3}
       propertyPath: m_RootOrder

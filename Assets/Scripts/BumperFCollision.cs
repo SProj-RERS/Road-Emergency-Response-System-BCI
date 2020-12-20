@@ -23,7 +23,7 @@ public class BumperFCollision : MonoBehaviour
             transform.localPosition = new Vector3(new_x,new_y,0f);
             carAudio.PlayOneShot(crashSound, 1.0f);
         }
-        if(other.tag == "footpath")
+        if(other.tag == "footpath" || other.tag == "bin")
         {
             carAudio.PlayOneShot(thudSound, 1.0f);
         }

@@ -12,6 +12,7 @@ TagManager:
   - movingcharacter
   - character
   - deadcharacter
+  - bin
   layers:
   - Default
   - TransparentFX

@@ -22,24 +22,24 @@ public class HoodCollision : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {       
-        if(other.tag == "othercar" || other.tag == "streetlight")
+        if(other.tag == "othercar")
         {
-            hits +=1;
+            hits += 1;
             explosionSmoke.Play();
             
            if(hits == 3)
            {
                 explosionSmoke.Stop();
                 explosionFire.Play();
+
                 if(transform.position.z > 490f)
                 {
                     Instantiate(firetruck,new Vector3(-583f,17.4f,603.8f),Quaternion.Euler(0,90,0));
-                    // firetruck.position = Vector3.MoveTowards(firetruck.position,character.position,speed * Time.deltaTime);
                 }
+                
                 if(transform.position.z < 405f)
                 {
                     Instantiate(firetruck,new Vector3(779f,17.4f,331f),Quaternion.Euler(0,270,0));
-                    // firetruck.position = Vector3.MoveTowards(firetruck.position,character.position,speed * Time.deltaTime);
                 }
             }
 
@@ -49,7 +49,7 @@ public class HoodCollision : MonoBehaviour
             transform.localPosition = new Vector3(0f,new_y,new_z);
             carAudio.PlayOneShot(crashSound, 1.0f);  
         }
-        if(other.tag == "footpath")
+        if(other.tag == "footpath" || other.tag == "bin")
         {
             carAudio.PlayOneShot(thudSound, 1.0f);
         }

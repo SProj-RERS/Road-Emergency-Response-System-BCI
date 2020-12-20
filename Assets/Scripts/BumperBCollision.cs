@@ -15,7 +15,7 @@ public class BumperBCollision : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {       
-        if(other.tag == "othercar" || other.tag == "streetlight")
+        if(other.tag == "othercar" || other.tag == "streetlight" || other.tag == "bin")
         {
             transform.localRotation = Quaternion.Euler(2.159f,-0.18f,-5.042f);
             float new_y = transform.localPosition.y - 0.05f;
@@ -24,7 +24,7 @@ public class BumperBCollision : MonoBehaviour
             carAudio.PlayOneShot(crashSound, 1.0f);
            
         }
-        if(other.tag == "footpath")
+        if(other.tag == "footpath" || other.tag == "bin")
         {
             carAudio.PlayOneShot(thudSound, 1.0f);
         }

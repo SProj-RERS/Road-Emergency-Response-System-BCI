@@ -8,27 +8,28 @@ public class InputManager : MonoBehaviour
     public float throttle;
     public float steer;
     public static int counter = 0;
-    // public ParticleSystem explosionFire;
-
-    // void Start()
-    // {
-        // explosionFire.Stop();
-    // }
+    public bool l;
+    public bool b;
+    public bool h;
     
     void OnTriggerEnter(Collider other) {
         if(other.tag == "othercar" || other.tag == "streetlight") {
             counter++;
         }
     }
-    void Update () {
-        if(counter <= 6) {
-            // print(counter);
+    void Update () 
+    {
+        l = Input.GetKeyDown(KeyCode.L);
+        b = Input.GetKeyDown(KeyCode.B);
+        h = Input.GetKeyDown(KeyCode.H);
+        
+        if(counter <= 6) 
+        {
             throttle = Input.GetAxis("Vertical");
             steer = Input.GetAxis("Horizontal");
         }
-        else{
-            // print("fire!!!!");
-            // explosionFire.Play();
+        else
+        {
             throttle = 0;
             steer = 0;
         }

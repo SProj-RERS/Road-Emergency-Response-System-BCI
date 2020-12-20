@@ -26,7 +26,7 @@ public class moveambulance : MonoBehaviour
        speed = 100;
        new_x = (1)*maincar.position.x-30f;
        new_z = (1)*maincar.position.z-20f;
-    //    new_y = maincar.position.y+30f;
+    // new_y = maincar.position.y+30f;
        transform.position = Vector3.MoveTowards(transform.position, new Vector3(new_x, transform.position.y, transform.position.z), speed * Time.deltaTime);
     }
 }

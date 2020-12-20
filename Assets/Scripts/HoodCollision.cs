@@ -22,8 +22,6 @@ public class HoodCollision : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {       
-        
-        // print("????????????");
         if(other.tag == "othercar" || other.tag == "streetlight")
         {
             hits +=1;
@@ -31,21 +29,19 @@ public class HoodCollision : MonoBehaviour
             
            if(hits == 3)
            {
-               print(hits);
                 explosionSmoke.Stop();
                 explosionFire.Play();
-                 if(transform.position.z > 490f)
-            {
-                Instantiate(firetruck,new Vector3(-583f,17.4f,603.8f),Quaternion.Euler(0,90,0));
-                // firetruck.position = Vector3.MoveTowards(firetruck.position,character.position,speed * Time.deltaTime);
+                if(transform.position.z > 490f)
+                {
+                    Instantiate(firetruck,new Vector3(-583f,17.4f,603.8f),Quaternion.Euler(0,90,0));
+                    // firetruck.position = Vector3.MoveTowards(firetruck.position,character.position,speed * Time.deltaTime);
+                }
+                if(transform.position.z < 405f)
+                {
+                    Instantiate(firetruck,new Vector3(779f,17.4f,331f),Quaternion.Euler(0,270,0));
+                    // firetruck.position = Vector3.MoveTowards(firetruck.position,character.position,speed * Time.deltaTime);
+                }
             }
-            if(transform.position.z < 405f)
-            {
-                Instantiate(firetruck,new Vector3(779f,17.4f,331f),Quaternion.Euler(0,270,0));
-                // firetruck.position = Vector3.MoveTowards(firetruck.position,character.position,speed * Time.deltaTime);
-            }
-            }
-          
 
             transform.localRotation = Quaternion.Euler(-28.961f,0.002f,0f);
             float new_y = transform.localPosition.y - 0.51f;

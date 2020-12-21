@@ -58,7 +58,7 @@ public class CarController : MonoBehaviour
 	{
 		foreach (WheelCollider wheel in throttlewheels)
 		{
-			wheel.motorTorque = strengthCoefficient * Time.deltaTime * im.throttle;
+				wheel.motorTorque = strengthCoefficient * Time.deltaTime * im.throttle;
 		}
 
 		foreach (GameObject wheel in steeringwheels)

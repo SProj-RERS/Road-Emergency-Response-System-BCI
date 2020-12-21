@@ -1559,6 +1559,7 @@ GameObject:
   - component: {fileID: 2256147893583748506}
   - component: {fileID: 4217545172198906060}
   - component: {fileID: 3148632538918806754}
+  - component: {fileID: 1424758322}
   m_Layer: 0
   m_Name: Car Ambulance N230610 1
   m_TagString: Untagged
@@ -1635,7 +1636,7 @@ AudioListener:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2906042068397455303}
-  m_Enabled: 1
+  m_Enabled: 0
 --- !u!82 &3148632538918806754
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1656,7 +1657,7 @@ AudioSource:
   SpatializePostEffects: 0
   Priority: 105
   DopplerLevel: 1.15
-  MinDistance: 1
+  MinDistance: 29.63208
   MaxDistance: 500
   Pan2D: -0.247
   rolloffMode: 0
@@ -1732,6 +1733,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!65 &1424758322
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2906042068397455303}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 69.777374, y: 71.986694, z: 172.19235}
+  m_Center: {x: -0.102786146, y: 10.198186, z: -4.1341305}
 --- !u!1 &3349908488181818135
 GameObject:
   m_ObjectHideFlags: 0

@@ -13,6 +13,7 @@ TagManager:
   - character
   - deadcharacter
   - bin
+  - end
   layers:
   - Default
   - TransparentFX

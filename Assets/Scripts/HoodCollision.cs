@@ -49,7 +49,7 @@ public class HoodCollision : MonoBehaviour
             transform.localPosition = new Vector3(0f,new_y,new_z);
             carAudio.PlayOneShot(crashSound, 1.0f);  
         }
-        if(other.tag == "footpath" || other.tag == "bin")
+        if(other.tag == "footpath" || other.tag == "bin" || other.tag == "end")
         {
             carAudio.PlayOneShot(thudSound, 1.0f);
         }

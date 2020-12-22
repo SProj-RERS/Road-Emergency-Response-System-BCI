@@ -15,6 +15,7 @@ TagManager:
   - bin
   - end
   - footbridge
+  - idlecharacter
   layers:
   - Default
   - TransparentFX

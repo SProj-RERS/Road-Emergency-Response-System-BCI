@@ -10,7 +10,7 @@ public class HoodCollision : MonoBehaviour
    public AudioClip crashSound;
    public AudioClip thudSound;
    private AudioSource carAudio;
-   public int hits = 0;
+   public float hits;
    public GameObject firetruck;
 
    void Start()

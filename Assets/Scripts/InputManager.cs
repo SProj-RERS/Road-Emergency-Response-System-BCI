@@ -9,7 +9,6 @@ public class InputManager : MonoBehaviour
     public float steer;
     public static int counter = 0;
     public bool l;
-    public bool b;
     public bool h;
     
     void OnTriggerEnter(Collider other) {
@@ -20,7 +19,6 @@ public class InputManager : MonoBehaviour
     void Update () 
     {
         l = Input.GetKeyDown(KeyCode.L);
-        b = Input.GetKeyDown(KeyCode.B);
         h = Input.GetKeyDown(KeyCode.H);
         
         if(counter <= 6) 

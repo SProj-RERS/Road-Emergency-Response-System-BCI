@@ -40,14 +40,6 @@ public class CarController : MonoBehaviour
 			lm.ToggleHeadLights();
 		}
 
-		if(im.b)
-		{
-			foreach(GameObject tl in tailLights)
-			{
-				tl.GetComponent<Renderer>().material.SetColor("_EmissionColor", im.b ? new Color(0.5f,0.111f,0.111f) : Color.black);
-			}
-		}
-
 		if(im.h)
 		{
 			hornAudio.PlayOneShot(hornSound, 1.0f);
@@ -58,7 +50,23 @@ public class CarController : MonoBehaviour
 	{
 		foreach (WheelCollider wheel in throttlewheels)
 		{
+			if(im.throttle > 0)
+			{
 				wheel.motorTorque = strengthCoefficient * Time.deltaTime * im.throttle;
+				foreach(GameObject tl in tailLights)
+				{
+					tl.GetComponent<Renderer>().material.SetColor("_EmissionColor", Color.black);
+				}
+			}
+
+			if(im.throttle < 0)
+			{
+				wheel.motorTorque = strengthCoefficient * Time.deltaTime * im.throttle;
+				foreach(GameObject tl in tailLights)
+				{
+					tl.GetComponent<Renderer>().material.SetColor("_EmissionColor", Color.red);
+				}
+			}
 		}
 
 		foreach (GameObject wheel in steeringwheels)

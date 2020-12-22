@@ -35082,6 +35082,11 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 1f2d45d35a2d63241a0bd880ea8a086c, type: 2}
     - target: {fileID: 5832539331188303291, guid: c01dbb5a0a6f1a24d8fdcb41541e497e,
         type: 3}
+      propertyPath: m_ForwardFriction.m_Stiffness
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5832539331188303291, guid: c01dbb5a0a6f1a24d8fdcb41541e497e,
+        type: 3}
       propertyPath: m_ForwardFriction.m_ExtremumSlip
       value: 6
       objectReference: {fileID: 0}
@@ -35092,6 +35097,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5832539331983646111, guid: c01dbb5a0a6f1a24d8fdcb41541e497e,
         type: 3}
+      propertyPath: m_ForwardFriction.m_Stiffness
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5832539331983646111, guid: c01dbb5a0a6f1a24d8fdcb41541e497e,
+        type: 3}
       propertyPath: m_ForwardFriction.m_ExtremumSlip
       value: 6
       objectReference: {fileID: 0}
@@ -35099,6 +35109,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_ForwardFriction.m_AsymptoteSlip
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5832539332285334196, guid: c01dbb5a0a6f1a24d8fdcb41541e497e,
+        type: 3}
+      propertyPath: m_ForwardFriction.m_Stiffness
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 5832539332285334196, guid: c01dbb5a0a6f1a24d8fdcb41541e497e,
         type: 3}
@@ -35112,6 +35127,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5832539332421448073, guid: c01dbb5a0a6f1a24d8fdcb41541e497e,
         type: 3}
+      propertyPath: brake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5832539332421448073, guid: c01dbb5a0a6f1a24d8fdcb41541e497e,
+        type: 3}
       propertyPath: explosionFire
       value: 
       objectReference: {fileID: 1383784355}
@@ -35122,6 +35142,11 @@ PrefabInstance:
       objectReference: {fileID: 994191929}
     - target: {fileID: 5832539332421448078, guid: c01dbb5a0a6f1a24d8fdcb41541e497e,
         type: 3}
+      propertyPath: maxTurn
+      value: 60
+      objectReference: {fileID: 0}
+    - target: {fileID: 5832539332421448078, guid: c01dbb5a0a6f1a24d8fdcb41541e497e,
+        type: 3}
       propertyPath: ambSound
       value: 
       objectReference: {fileID: 8300000, guid: 23b69b3ba2708a548b4f3e37a5b745d7, type: 3}
@@ -35130,6 +35155,16 @@ PrefabInstance:
       propertyPath: hornSound
       value: 
       objectReference: {fileID: 8300000, guid: 23b69b3ba2708a548b4f3e37a5b745d7, type: 3}
+    - target: {fileID: 5832539332421448078, guid: c01dbb5a0a6f1a24d8fdcb41541e497e,
+        type: 3}
+      propertyPath: brakeStrength
+      value: 400000
+      objectReference: {fileID: 0}
+    - target: {fileID: 5832539332421448078, guid: c01dbb5a0a6f1a24d8fdcb41541e497e,
+        type: 3}
+      propertyPath: strengthCoefficient
+      value: 400000
+      objectReference: {fileID: 0}
     - target: {fileID: 5832539332421448078, guid: c01dbb5a0a6f1a24d8fdcb41541e497e,
         type: 3}
       propertyPath: tailLights.Array.size
@@ -35145,6 +35180,26 @@ PrefabInstance:
       propertyPath: tailLights.Array.data[1]
       value: 
       objectReference: {fileID: 1332718}
+    - target: {fileID: 5832539332421448114, guid: c01dbb5a0a6f1a24d8fdcb41541e497e,
+        type: 3}
+      propertyPath: m_Drag
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 5832539332421448114, guid: c01dbb5a0a6f1a24d8fdcb41541e497e,
+        type: 3}
+      propertyPath: m_Mass
+      value: 1500
+      objectReference: {fileID: 0}
+    - target: {fileID: 5832539332421448114, guid: c01dbb5a0a6f1a24d8fdcb41541e497e,
+        type: 3}
+      propertyPath: m_AngularDrag
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 5832539332706578292, guid: c01dbb5a0a6f1a24d8fdcb41541e497e,
+        type: 3}
+      propertyPath: m_ForwardFriction.m_Stiffness
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 5832539332706578292, guid: c01dbb5a0a6f1a24d8fdcb41541e497e,
         type: 3}
       propertyPath: m_ForwardFriction.m_ExtremumSlip

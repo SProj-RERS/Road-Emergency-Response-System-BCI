@@ -12,6 +12,7 @@ public class moveambulance : MonoBehaviour
     public float new_x;
     public float new_z;
     public float new_y;
+    public GameObject[] othercars;
 
     void Start()
     {
@@ -41,7 +42,6 @@ public class moveambulance : MonoBehaviour
         if(other.tag == "end"){
             print("disappear");
             Destroy(gameObject);
-            
         }
     }
 
@@ -49,6 +49,14 @@ public class moveambulance : MonoBehaviour
     {
         Destroy (GameObject.FindWithTag("deadcharacter"));
         transform.Translate(Vector3.forward * Time.deltaTime * speed);
+        othercars = GameObject.FindGameObjectsWithTag("othercar");
+        foreach (GameObject car in othercars)
+        {
+            if(car.GetComponent<BetterWaypointFollower>() != null)
+            {
+                car.GetComponent<BetterWaypointFollower>().enabled = true;
+            }
+        }
         
         // print("hi");
        

@@ -11,6 +11,8 @@ public class IdleCharacter : MonoBehaviour
     public GameObject blood2;
     public GameObject ambulance;
     public GameObject[] othercharacters;
+    public GameObject[] othercars;
+
     public int dead = 0;
 
     void Start()
@@ -44,6 +46,14 @@ public class IdleCharacter : MonoBehaviour
             if(character.position.z < 405f)
             {
                 Instantiate(ambulance,new Vector3(779f,10.8f,331f),Quaternion.Euler(0,270,0));
+            }
+            othercars = GameObject.FindGameObjectsWithTag("othercar");
+            foreach (GameObject car in othercars)
+            {
+                if(car.GetComponent<BetterWaypointFollower>() != null)
+                {
+                    car.GetComponent<BetterWaypointFollower>().enabled = false;
+                }
             }
             dead = 1;
        }

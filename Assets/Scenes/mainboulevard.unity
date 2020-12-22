@@ -3802,6 +3802,7 @@ MonoBehaviour:
   ambulance: {fileID: 2906042068397455303, guid: cf44d00cd485fc44889e50d96302d244,
     type: 3}
   othercharacters: []
+  othercars: []
   dead: 0
 --- !u!1 &299479651 stripped
 GameObject:
@@ -3906,6 +3907,7 @@ MonoBehaviour:
   ambulance: {fileID: 2906042068397455303, guid: cf44d00cd485fc44889e50d96302d244,
     type: 3}
   othercharacters: []
+  othercars: []
   dead: 0
 --- !u!4 &325710127 stripped
 Transform:
@@ -7873,6 +7875,7 @@ MonoBehaviour:
   ambulance: {fileID: 2906042068397455303, guid: cf44d00cd485fc44889e50d96302d244,
     type: 3}
   othercharacters: []
+  othercars: []
   dead: 0
 --- !u!4 &360759122 stripped
 Transform:
@@ -10859,6 +10862,7 @@ MonoBehaviour:
   ambulance: {fileID: 2906042068397455303, guid: cf44d00cd485fc44889e50d96302d244,
     type: 3}
   othercharacters: []
+  othercars: []
   dead: 0
 --- !u!1 &698825583 stripped
 GameObject:
@@ -15111,6 +15115,7 @@ MonoBehaviour:
   ambulance: {fileID: 2906042068397455303, guid: cf44d00cd485fc44889e50d96302d244,
     type: 3}
   othercharacters: []
+  othercars: []
   dead: 0
 --- !u!4 &1001139020 stripped
 Transform:
@@ -19746,7 +19751,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1811444609481538, guid: 4f9a1168ab73c884bb900de3b6909c10, type: 3}
       propertyPath: m_TagString
-      value: othercar
+      value: Untagged
       objectReference: {fileID: 0}
     - target: {fileID: 4876364002059338, guid: 4f9a1168ab73c884bb900de3b6909c10, type: 3}
       propertyPath: m_RootOrder
@@ -25849,6 +25854,7 @@ MonoBehaviour:
   ambulance: {fileID: 2906042068397455303, guid: cf44d00cd485fc44889e50d96302d244,
     type: 3}
   othercharacters: []
+  othercars: []
   dead: 0
 --- !u!65 &1618357098
 BoxCollider:
@@ -28667,6 +28673,7 @@ MonoBehaviour:
   ambulance: {fileID: 2906042068397455303, guid: cf44d00cd485fc44889e50d96302d244,
     type: 3}
   othercharacters: []
+  othercars: []
   dead: 0
 --- !u!4 &1788637127 stripped
 Transform:
@@ -31719,6 +31726,7 @@ MonoBehaviour:
   ambulance: {fileID: 2906042068397455303, guid: cf44d00cd485fc44889e50d96302d244,
     type: 3}
   othercharacters: []
+  othercars: []
   dead: 0
 --- !u!4 &1946918586 stripped
 Transform:

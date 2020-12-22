@@ -46,14 +46,6 @@ public class IdleCharacter : MonoBehaviour
             {
                 Instantiate(ambulance,new Vector3(779f,10.8f,331f),Quaternion.Euler(0,270,0));
             }
-            othercars = GameObject.FindGameObjectsWithTag("othercar");
-            foreach (GameObject car in othercars)
-            {
-                if(car.GetComponent<BetterWaypointFollower>() != null)
-                {
-                    car.GetComponent<BetterWaypointFollower>().enabled = false;
-                }
-            }
             othercharacters = GameObject.FindGameObjectsWithTag("character");
             dead = 1;
        }
@@ -61,11 +53,24 @@ public class IdleCharacter : MonoBehaviour
     }
     void Update()
     {
+        if(gameObject.tag == "deadcharacter")
+        {
+            othercars = GameObject.FindGameObjectsWithTag("othercar");
+            foreach (GameObject car in othercars)
+            {
+                if(car.GetComponent<BetterWaypointFollower>() != null)
+                {
+                    if(Mathf.Abs(transform.position.z - car.transform.position.z) <200f && Mathf.Abs(transform.position.x - car.transform.position.x) <200f)
+                    {
+                        car.GetComponent<BetterWaypointFollower>().enabled = false;                    
+                    }
+                }
+            }
+        }
         int total_alive = othercharacters.Length;
         int counter = 0;
         if(dead == 1)
         {
-            // othercharacters = GameObject.FindGameObjectsWithTag("character");
             int i = 0;
             int j = 0;
             int k = 1;

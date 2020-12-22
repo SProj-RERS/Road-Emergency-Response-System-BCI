@@ -21,7 +21,7 @@ public class InputManager : MonoBehaviour
         l = Input.GetKeyDown(KeyCode.L);
         h = Input.GetKeyDown(KeyCode.H);
         
-        if(counter <= 6) 
+        if(counter <= 25) 
         {
             throttle = Input.GetAxis("Vertical");
             steer = Input.GetAxis("Horizontal");

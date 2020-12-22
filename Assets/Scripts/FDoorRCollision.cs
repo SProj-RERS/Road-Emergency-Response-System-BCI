@@ -15,16 +15,16 @@ public class FDoorRCollision : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {       
-        if(other.tag == "othercar" || other.tag == "streetlight")
+        if(other.tag == "othercar")
         {
             transform.localRotation = Quaternion.Euler(12f,0f,0f);
-            carAudio.PlayOneShot(crashSound, 1.0f);
-           
+            carAudio.PlayOneShot(crashSound, 1.0f); 
         }
 
-        if(other.tag == "footpath")
+        if(other.tag == "streetlight" || other.tag == "footpath" || other.tag == "bin" || other.tag == "footbridge")
         {
-            carAudio.PlayOneShot(thudSound, 1.0f);
+            transform.localRotation = Quaternion.Euler(12f,0f,0f);
+            carAudio.PlayOneShot(thudSound, 1.0f); 
         }
     }
 

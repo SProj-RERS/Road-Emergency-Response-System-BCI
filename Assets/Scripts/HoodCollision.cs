@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -10,7 +10,7 @@ public class HoodCollision : MonoBehaviour
    public AudioClip crashSound;
    public AudioClip thudSound;
    private AudioSource carAudio;
-   public float hits;
+   public int hits = 0;
    public GameObject firetruck;
 
    void Start()
@@ -27,7 +27,7 @@ public class HoodCollision : MonoBehaviour
             hits += 1;
             explosionSmoke.Play();
             
-           if(hits == 3)
+           if(hits == 4)
            {
                 explosionSmoke.Stop();
                 explosionFire.Play();

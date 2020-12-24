@@ -11,6 +11,10 @@ public class StopCharacterMotion : MonoBehaviour
     public GameObject blood1;
     public GameObject blood2;
     public GameObject ambulance;
+    public GameObject[] othercharacters;
+    public GameObject[] othercars;
+    public int[] enteridle;
+    public int dead = 0;
 
     void Start()
     {
@@ -22,6 +26,7 @@ public class StopCharacterMotion : MonoBehaviour
    {
        if(collision.tag == "maincar")
        {
+            gameObject.tag = "deadcharacter";
             waypointscript.enabled = false;
             boxcollider.enabled = false;
             animation.runtimeAnimatorController = Resources.Load("Death") as RuntimeAnimatorController; 
@@ -39,6 +44,13 @@ public class StopCharacterMotion : MonoBehaviour
                 Instantiate(ambulance,new Vector3(779f,10.8f,331f),Quaternion.Euler(0,270,0));
                 // ambulance.position = Vector3.MoveTowards(ambulance.position,character.position,speed * Time.deltaTime);
             }
+            othercharacters = GameObject.FindGameObjectsWithTag("character");
+            enteridle = new int[othercharacters.Length];
+            for(int p=0; p<othercharacters.Length; p++)
+            {
+                enteridle[p] = 0;
+            }
+            dead = 1;
        }  
     }
 
@@ -56,5 +68,60 @@ public class StopCharacterMotion : MonoBehaviour
         float new_y2 = character.position.y;
         float new_z2 = character.position.z-18f;
         Instantiate(blood1,new Vector3(new_x2,new_y2,new_z2),character.rotation);
+    }
+void Update()
+{
+    if(gameObject.tag == "deadcharacter")
+    {
+        othercars = GameObject.FindGameObjectsWithTag("othercar");
+        foreach (GameObject car in othercars)
+        {
+            if(car.GetComponent<BetterWaypointFollower>() != null)
+            {
+                if(Mathf.Abs(transform.position.z - car.transform.position.z) <200f && Mathf.Abs(transform.position.x - car.transform.position.x) <200f)
+                {
+                    car.GetComponent<BetterWaypointFollower>().enabled = false;                    
+                }
+            }
+        }
+    }
+        int total_alive = othercharacters.Length;
+        int counter = 0;
+        if(dead == 1)
+        {
+            int i = 0;
+            int j = 0;
+            int k = 1;
+            int l = 0;
+            for(int p=0; p<total_alive; p++)
+            {
+                Animator person_animation;
+                GameObject person = othercharacters[p];
+                person_animation = person.GetComponent<Animator>();
+                person.transform.LookAt(transform.position);
+                Vector3 new_position = new Vector3(transform.position.x+i,transform.position.y,transform.position.z+j);
+                if(enteridle[p] == 0)
+                {
+                    person_animation.runtimeAnimatorController = Resources.Load("Running") as RuntimeAnimatorController;
+                    person.transform.position = Vector3.MoveTowards(person.transform.position, new_position, 50 * Time.deltaTime);
+                    i += 20%(k+1);
+                    j += 15%(k+l);
+                    k += 2;
+                    l += 1;
+                }
+                if(person.transform.position == new_position && enteridle[p] == 0)
+                {
+                    person_animation = person.GetComponent<Animator>();
+                    person_animation.runtimeAnimatorController = Resources.Load("Idle") as RuntimeAnimatorController;
+                    counter += 1;
+                    enteridle[p] = 1;
+                }
+                person.tag = "idlecharacter";
+            }
+            if(counter == total_alive)
+            {
+                dead = 0;
+            }
+        }
     }
 }

@@ -12,6 +12,7 @@ public class IdleCharacter : MonoBehaviour
     public GameObject ambulance;
     public GameObject[] othercharacters;
     public GameObject[] othercars;
+    public int[] enteridle;
     public int dead = 0;
 
     void Start()
@@ -22,7 +23,7 @@ public class IdleCharacter : MonoBehaviour
 
     void OnTriggerEnter(Collider collision)
     {
-       if(collision.tag == "maincar" && dead != 1)
+       if(collision.tag == "maincar")
        {
             gameObject.tag = "deadcharacter";
             boxcollider.enabled = false;
@@ -40,6 +41,11 @@ public class IdleCharacter : MonoBehaviour
                 Instantiate(ambulance,new Vector3(779f,10.8f,331f),Quaternion.Euler(0,270,0));
             }
             othercharacters = GameObject.FindGameObjectsWithTag("character");
+            enteridle = new int[othercharacters.Length];
+            for(int p=0; p<othercharacters.Length; p++)
+            {
+                enteridle[p] = 0;
+            }
             dead = 1;
        }
   
@@ -85,24 +91,28 @@ public class IdleCharacter : MonoBehaviour
             int j = 0;
             int k = 1;
             int l = 0;
-            foreach (GameObject person in othercharacters)
+            for(int p=0; p<total_alive; p++)
             {
                 Animator person_animation;
+                GameObject person = othercharacters[p];
                 person_animation = person.GetComponent<Animator>();
                 person.transform.LookAt(transform.position);
-                person_animation.runtimeAnimatorController = Resources.Load("Running") as RuntimeAnimatorController;
                 Vector3 new_position = new Vector3(transform.position.x+i,transform.position.y,transform.position.z+j);
-                person.transform.position = Vector3.MoveTowards(person.transform.position, new_position, 100 * Time.deltaTime);
-                i += 20%(k+1);
-                j += 15%(k+l);
-                k += 2;
-                l += 1;
-
-                if(person.transform.position == new_position)
+                if(enteridle[p] == 0)
+                {
+                    person_animation.runtimeAnimatorController = Resources.Load("Running") as RuntimeAnimatorController;
+                    person.transform.position = Vector3.MoveTowards(person.transform.position, new_position, 50 * Time.deltaTime);
+                    i += 20%(k+1);
+                    j += 15%(k+l);
+                    k += 2;
+                    l += 1;
+                }
+                if(person.transform.position == new_position && enteridle[p] == 0)
                 {
                     person_animation = person.GetComponent<Animator>();
                     person_animation.runtimeAnimatorController = Resources.Load("Idle") as RuntimeAnimatorController;
                     counter += 1;
+                    enteridle[p] = 1;
                 }
                 person.tag = "idlecharacter";
             }

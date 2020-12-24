@@ -3864,6 +3864,7 @@ MonoBehaviour:
     type: 3}
   othercharacters: []
   othercars: []
+  enteridle: 
   dead: 0
 --- !u!1 &299479651 stripped
 GameObject:
@@ -3969,6 +3970,7 @@ MonoBehaviour:
     type: 3}
   othercharacters: []
   othercars: []
+  enteridle: 
   dead: 0
 --- !u!4 &325710127 stripped
 Transform:
@@ -7950,6 +7952,7 @@ MonoBehaviour:
     type: 3}
   othercharacters: []
   othercars: []
+  enteridle: 
   dead: 0
 --- !u!4 &360759122 stripped
 Transform:
@@ -8771,6 +8774,10 @@ MonoBehaviour:
   blood2: {fileID: 5125221336906641272, guid: 255d5eea8cab19d469dfc5885df087e3, type: 3}
   ambulance: {fileID: 2906042068397455303, guid: cf44d00cd485fc44889e50d96302d244,
     type: 3}
+  othercharacters: []
+  othercars: []
+  enteridle: 
+  dead: 0
 --- !u!1001 &480633908
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9104,6 +9111,10 @@ MonoBehaviour:
   blood2: {fileID: 5125221336906641272, guid: 255d5eea8cab19d469dfc5885df087e3, type: 3}
   ambulance: {fileID: 2906042068397455303, guid: cf44d00cd485fc44889e50d96302d244,
     type: 3}
+  othercharacters: []
+  othercars: []
+  enteridle: 
+  dead: 0
 --- !u!65 &507110406
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11037,6 +11048,7 @@ MonoBehaviour:
     type: 3}
   othercharacters: []
   othercars: []
+  enteridle: 
   dead: 0
 --- !u!1 &698825583 stripped
 GameObject:
@@ -15527,6 +15539,7 @@ MonoBehaviour:
     type: 3}
   othercharacters: []
   othercars: []
+  enteridle: 
   dead: 0
 --- !u!4 &1001139020 stripped
 Transform:
@@ -24263,6 +24276,10 @@ MonoBehaviour:
   blood2: {fileID: 5125221336906641272, guid: 255d5eea8cab19d469dfc5885df087e3, type: 3}
   ambulance: {fileID: 2906042068397455303, guid: cf44d00cd485fc44889e50d96302d244,
     type: 3}
+  othercharacters: []
+  othercars: []
+  enteridle: 
+  dead: 0
 --- !u!114 &1595563686
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26295,6 +26312,7 @@ MonoBehaviour:
     type: 3}
   othercharacters: []
   othercars: []
+  enteridle: 
   dead: 0
 --- !u!65 &1618357098
 BoxCollider:
@@ -29157,6 +29175,7 @@ MonoBehaviour:
     type: 3}
   othercharacters: []
   othercars: []
+  enteridle: 
   dead: 0
 --- !u!4 &1788637127 stripped
 Transform:
@@ -30160,7 +30179,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 396a66d2e54d31f44822f6e2fcb5b633,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -493.9
+      value: -473.3
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 396a66d2e54d31f44822f6e2fcb5b633,
         type: 3}
@@ -30170,7 +30189,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 396a66d2e54d31f44822f6e2fcb5b633,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 258.6
+      value: 261.3
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 396a66d2e54d31f44822f6e2fcb5b633,
         type: 3}
@@ -32393,6 +32412,7 @@ MonoBehaviour:
     type: 3}
   othercharacters: []
   othercars: []
+  enteridle: 
   dead: 0
 --- !u!4 &1946918586 stripped
 Transform:
@@ -36065,7 +36085,7 @@ PrefabInstance:
     - target: {fileID: 5836408109611268238, guid: c01dbb5a0a6f1a24d8fdcb41541e497e,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 273
+      value: 38
       objectReference: {fileID: 0}
     - target: {fileID: 5836408109611268238, guid: c01dbb5a0a6f1a24d8fdcb41541e497e,
         type: 3}
@@ -36075,7 +36095,7 @@ PrefabInstance:
     - target: {fileID: 5836408109611268238, guid: c01dbb5a0a6f1a24d8fdcb41541e497e,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 679
+      value: 207.8
       objectReference: {fileID: 0}
     - target: {fileID: 5836408109611268238, guid: c01dbb5a0a6f1a24d8fdcb41541e497e,
         type: 3}

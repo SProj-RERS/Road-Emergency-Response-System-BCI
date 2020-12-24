@@ -1625,10 +1625,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ambSound: {fileID: 8300000, guid: fa96086ec8af6ed458bfe118f80f9d12, type: 3}
   maincar: {fileID: 8311212259351059098, guid: 4889d784bcccbfd438dc909b5d56a188, type: 3}
+  cubeone: {fileID: 6047439695172150970, guid: bace23f04454a2b4c9150b97a260aaa0, type: 3}
+  cubetwo: {fileID: 3946860901770518434, guid: b233f2601ef0e9b4095091f6eae9d894, type: 3}
   speed: 5
   new_x: 0
   new_z: 0
   new_y: 0
+  othercars: []
 --- !u!81 &4217545172198906060
 AudioListener:
   m_ObjectHideFlags: 0

@@ -8,6 +8,8 @@ public class moveambulance : MonoBehaviour
     public AudioClip ambSound;
     private AudioSource ambAudio;
     public Transform maincar;
+    public Transform cubeone;
+    public Transform cubetwo;
     public int speed;
     public float new_x;
     public float new_z;
@@ -17,6 +19,8 @@ public class moveambulance : MonoBehaviour
     void Start()
     {
         ambAudio = GetComponent<AudioSource>();
+               new_x = (1)*maincar.position.x-30f;
+       new_z = (1)*maincar.position.z-20f;
     }
 
     // Update is called once per frame
@@ -25,8 +29,7 @@ public class moveambulance : MonoBehaviour
         
        ambAudio.PlayOneShot(ambSound, 1.0f);
        speed = 100;
-       new_x = (1)*maincar.position.x-30f;
-       new_z = (1)*maincar.position.z-20f;
+
     // new_y = maincar.position.y+30f;
        transform.position = Vector3.MoveTowards(transform.position, new Vector3(new_x, transform.position.y, transform.position.z), speed * Time.deltaTime);
     //    transform.Translate(Vector3.forward * Time.deltaTime * speed);
@@ -48,7 +51,19 @@ public class moveambulance : MonoBehaviour
     void LaunchProjectile()
     {
         Destroy (GameObject.FindWithTag("deadcharacter"));
-        transform.Translate(Vector3.forward * Time.deltaTime * speed);
+          if(transform.position.z > 490f)
+            {
+                new_x = 950f;
+                // transform.position = Vector3.MoveTowards(transform.position, new Vector3(cubeone.position.x, transform.position.y, transform.position.z), speed * Time.deltaTime);
+                // ambulance.position = Vector3.MoveTowards(ambulance.position,character.position,speed * Time.deltaTime);
+            }
+            if(transform.position.z < 405f)
+            {
+                new_x = -800f;
+                // transform.position = Vector3.MoveTowards(transform.position, new Vector3(cubetwo.position.x, transform.position.y, transform.position.z), speed * Time.deltaTime);
+                // ambulance.position = Vector3.MoveTowards(ambulance.position,character.position,speed * Time.deltaTime);
+            }
+        // transform.Translate(Vector3.forward * Time.deltaTime * speed);
         othercars = GameObject.FindGameObjectsWithTag("othercar");
         foreach (GameObject car in othercars)
         {

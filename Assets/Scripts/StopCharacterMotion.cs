@@ -29,12 +29,13 @@ public class StopCharacterMotion : MonoBehaviour
             float new_x1 = character.position.x+10f;
             float new_y1 = character.position.y;
             float new_z1 = character.position.z;
-            Instantiate(blood1,new Vector3(new_x1,new_y1,new_z1),character.rotation);
+            Invoke("Instantiate(blood1,new Vector3(new_x1,new_y1,new_z1),character.rotation);",2.0f);
+            
 
             float new_x2 = character.position.x+15f;
             float new_y2 = character.position.y;
             float new_z2 = character.position.z-18f;
-            Instantiate(blood1,new Vector3(new_x2,new_y2,new_z2),character.rotation);
+            Invoke("Instantiate(blood1,new Vector3(new_x2,new_y2,new_z2),character.rotation);",2.0f);
 
             if(character.position.z > 490f)
             {

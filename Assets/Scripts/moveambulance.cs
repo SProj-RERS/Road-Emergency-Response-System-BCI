@@ -51,6 +51,8 @@ public class moveambulance : MonoBehaviour
     void LaunchProjectile()
     {
         Destroy (GameObject.FindWithTag("deadcharacter"));
+        Destroy (GameObject.FindWithTag("blood"));
+        
           if(transform.position.z > 490f)
             {
                 new_x = 950f;

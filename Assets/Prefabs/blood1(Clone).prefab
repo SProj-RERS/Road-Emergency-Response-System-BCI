@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 1109012499207856770}
   m_Layer: 0
   m_Name: blood1(Clone)
-  m_TagString: Untagged
+  m_TagString: blood
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -25,13 +25,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5899991402089546809}
-  m_LocalRotation: {x: -2.2325695e-10, y: -0.3707772, z: -8.913172e-11, w: 0.9287219}
+  m_LocalRotation: {x: 0, y: -0.3707762, z: 0, w: 0.9287222}
   m_LocalPosition: {x: 366.76056, y: 0.6, z: 591.06274}
   m_LocalScale: {x: 0.7980258, y: 0.7980258, z: 0.7980258}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -43.527, z: 0}
 --- !u!33 &3863054650620432634
 MeshFilter:
   m_ObjectHideFlags: 0

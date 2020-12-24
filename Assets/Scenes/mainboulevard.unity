@@ -3858,8 +3858,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   character: {fileID: 293141510}
-  blood1: {fileID: 100000, guid: 358b75ea5451cf143ab19029a189097d, type: 3}
-  blood2: {fileID: 100000, guid: 18a11fd6df8ceb449b8785301026d639, type: 3}
+  blood1: {fileID: 7405530659694552770, guid: e55fc288dfff33d408c2df8c6706eb4d, type: 3}
+  blood2: {fileID: 5125221336906641272, guid: 255d5eea8cab19d469dfc5885df087e3, type: 3}
   ambulance: {fileID: 2906042068397455303, guid: cf44d00cd485fc44889e50d96302d244,
     type: 3}
   othercharacters: []
@@ -3963,8 +3963,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   character: {fileID: 325710127}
-  blood1: {fileID: 100000, guid: 358b75ea5451cf143ab19029a189097d, type: 3}
-  blood2: {fileID: 100000, guid: 18a11fd6df8ceb449b8785301026d639, type: 3}
+  blood1: {fileID: 7405530659694552770, guid: e55fc288dfff33d408c2df8c6706eb4d, type: 3}
+  blood2: {fileID: 5125221336906641272, guid: 255d5eea8cab19d469dfc5885df087e3, type: 3}
   ambulance: {fileID: 2906042068397455303, guid: cf44d00cd485fc44889e50d96302d244,
     type: 3}
   othercharacters: []
@@ -7944,8 +7944,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   character: {fileID: 360759122}
-  blood1: {fileID: 100000, guid: 358b75ea5451cf143ab19029a189097d, type: 3}
-  blood2: {fileID: 100000, guid: 18a11fd6df8ceb449b8785301026d639, type: 3}
+  blood1: {fileID: 7405530659694552770, guid: e55fc288dfff33d408c2df8c6706eb4d, type: 3}
+  blood2: {fileID: 5125221336906641272, guid: 255d5eea8cab19d469dfc5885df087e3, type: 3}
   ambulance: {fileID: 2906042068397455303, guid: cf44d00cd485fc44889e50d96302d244,
     type: 3}
   othercharacters: []
@@ -11031,8 +11031,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   character: {fileID: 689673096}
-  blood1: {fileID: 100000, guid: 358b75ea5451cf143ab19029a189097d, type: 3}
-  blood2: {fileID: 100000, guid: 18a11fd6df8ceb449b8785301026d639, type: 3}
+  blood1: {fileID: 7405530659694552770, guid: e55fc288dfff33d408c2df8c6706eb4d, type: 3}
+  blood2: {fileID: 5125221336906641272, guid: 255d5eea8cab19d469dfc5885df087e3, type: 3}
   ambulance: {fileID: 2906042068397455303, guid: cf44d00cd485fc44889e50d96302d244,
     type: 3}
   othercharacters: []
@@ -15521,8 +15521,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   character: {fileID: 1001139020}
-  blood1: {fileID: 100000, guid: 358b75ea5451cf143ab19029a189097d, type: 3}
-  blood2: {fileID: 100000, guid: 18a11fd6df8ceb449b8785301026d639, type: 3}
+  blood1: {fileID: 7405530659694552770, guid: e55fc288dfff33d408c2df8c6706eb4d, type: 3}
+  blood2: {fileID: 5125221336906641272, guid: 255d5eea8cab19d469dfc5885df087e3, type: 3}
   ambulance: {fileID: 2906042068397455303, guid: cf44d00cd485fc44889e50d96302d244,
     type: 3}
   othercharacters: []
@@ -24259,8 +24259,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   character: {fileID: 1595563687}
-  blood1: {fileID: 100000, guid: 358b75ea5451cf143ab19029a189097d, type: 3}
-  blood2: {fileID: 100000, guid: 18a11fd6df8ceb449b8785301026d639, type: 3}
+  blood1: {fileID: 7405530659694552770, guid: e55fc288dfff33d408c2df8c6706eb4d, type: 3}
+  blood2: {fileID: 5125221336906641272, guid: 255d5eea8cab19d469dfc5885df087e3, type: 3}
   ambulance: {fileID: 2906042068397455303, guid: cf44d00cd485fc44889e50d96302d244,
     type: 3}
 --- !u!114 &1595563686
@@ -26289,8 +26289,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   character: {fileID: 1618357099}
-  blood1: {fileID: 100000, guid: 358b75ea5451cf143ab19029a189097d, type: 3}
-  blood2: {fileID: 100000, guid: 18a11fd6df8ceb449b8785301026d639, type: 3}
+  blood1: {fileID: 7405530659694552770, guid: e55fc288dfff33d408c2df8c6706eb4d, type: 3}
+  blood2: {fileID: 5125221336906641272, guid: 255d5eea8cab19d469dfc5885df087e3, type: 3}
   ambulance: {fileID: 2906042068397455303, guid: cf44d00cd485fc44889e50d96302d244,
     type: 3}
   othercharacters: []
@@ -29151,8 +29151,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   character: {fileID: 1788637127}
-  blood1: {fileID: 100000, guid: 358b75ea5451cf143ab19029a189097d, type: 3}
-  blood2: {fileID: 100000, guid: 18a11fd6df8ceb449b8785301026d639, type: 3}
+  blood1: {fileID: 7405530659694552770, guid: e55fc288dfff33d408c2df8c6706eb4d, type: 3}
+  blood2: {fileID: 5125221336906641272, guid: 255d5eea8cab19d469dfc5885df087e3, type: 3}
   ambulance: {fileID: 2906042068397455303, guid: cf44d00cd485fc44889e50d96302d244,
     type: 3}
   othercharacters: []
@@ -32387,8 +32387,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   character: {fileID: 1946918586}
-  blood1: {fileID: 100000, guid: 358b75ea5451cf143ab19029a189097d, type: 3}
-  blood2: {fileID: 100000, guid: 18a11fd6df8ceb449b8785301026d639, type: 3}
+  blood1: {fileID: 7405530659694552770, guid: e55fc288dfff33d408c2df8c6706eb4d, type: 3}
+  blood2: {fileID: 5125221336906641272, guid: 255d5eea8cab19d469dfc5885df087e3, type: 3}
   ambulance: {fileID: 2906042068397455303, guid: cf44d00cd485fc44889e50d96302d244,
     type: 3}
   othercharacters: []

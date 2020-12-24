@@ -28,15 +28,8 @@ public class IdleCharacter : MonoBehaviour
             boxcollider.enabled = false;
             animation.runtimeAnimatorController = Resources.Load("Death") as RuntimeAnimatorController; 
 
-            float new_x1 = character.position.x+10f;
-            float new_y1 = character.position.y;
-            float new_z1 = character.position.z;
-            Invoke("Instantiate(blood1,new Vector3(new_x1,new_y1,new_z1),character.rotation);",2.0f);
-
-            float new_x2 = character.position.x+15f;
-            float new_y2 = character.position.y;
-            float new_z2 = character.position.z-18f;
-            Invoke("Instantiate(blood1,new Vector3(new_x2,new_y2,new_z2),character.rotation);",2.0f);
+            Invoke("bloodInvoke1",1.5f);
+            Invoke("bloodInvoke2",1.5f);
 
             if(character.position.z > 490f)
             {
@@ -51,6 +44,23 @@ public class IdleCharacter : MonoBehaviour
        }
   
     }
+
+    void bloodInvoke1()
+    {
+        float new_x1 = character.position.x+10f;
+        float new_y1 = character.position.y;
+        float new_z1 = character.position.z;
+        Instantiate(blood1,new Vector3(new_x1,new_y1,new_z1),character.rotation);
+    }
+
+    void bloodInvoke2()
+    {
+        float new_x2 = character.position.x+15f;
+        float new_y2 = character.position.y;
+        float new_z2 = character.position.z-18f;
+        Instantiate(blood1,new Vector3(new_x2,new_y2,new_z2),character.rotation);
+    }
+
     void Update()
     {
         if(gameObject.tag == "deadcharacter")

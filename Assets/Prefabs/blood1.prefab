@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 7405530659696490498}
   m_Layer: 0
   m_Name: blood1
-  m_TagString: Untagged
+  m_TagString: blood
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

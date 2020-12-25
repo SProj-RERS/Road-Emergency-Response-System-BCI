@@ -15,6 +15,7 @@ public class StopCharacterMotion : MonoBehaviour
     public GameObject[] othercars;
     public int[] enteridle;
     public int dead = 0;
+    public GameObject menuContainer;
 
     void Start()
     {
@@ -44,6 +45,7 @@ public class StopCharacterMotion : MonoBehaviour
                 Instantiate(ambulance,new Vector3(779f,10.8f,331f),Quaternion.Euler(0,270,0));
                 // ambulance.position = Vector3.MoveTowards(ambulance.position,character.position,speed * Time.deltaTime);
             }
+            
             othercharacters = GameObject.FindGameObjectsWithTag("character");
             enteridle = new int[othercharacters.Length];
             for(int p=0; p<othercharacters.Length; p++)
@@ -51,6 +53,7 @@ public class StopCharacterMotion : MonoBehaviour
                 enteridle[p] = 0;
             }
             dead = 1;
+            menuContainer.SetActive(true);
        }  
     }
 

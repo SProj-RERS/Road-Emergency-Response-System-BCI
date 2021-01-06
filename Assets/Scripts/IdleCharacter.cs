@@ -22,6 +22,11 @@ public class IdleCharacter : MonoBehaviour
         animation = GetComponent<Animator>();
     }
 
+    void gameover()
+    {
+        menuContainer.SetActive(true);
+    }
+
     void OnTriggerEnter(Collider collision)
     {
        if(collision.tag == "maincar")
@@ -49,7 +54,7 @@ public class IdleCharacter : MonoBehaviour
                 enteridle[p] = 0;
             }
             dead = 1;
-            menuContainer.SetActive(true);
+            Invoke("gameover",10.0f);
        }
   
     }

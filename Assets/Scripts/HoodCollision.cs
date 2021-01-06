@@ -26,6 +26,11 @@ public class HoodCollision : MonoBehaviour
        UnityEditor.EditorApplication.isPlaying = false;
    }
 
+   void gameover()
+   {
+       menuContainer.SetActive(true);
+   }
+
     void OnTriggerEnter(Collider other)
     {       
         if(other.tag == "othercar")
@@ -37,7 +42,7 @@ public class HoodCollision : MonoBehaviour
            {
                 explosionSmoke.Stop();
                 explosionFire.Play();
-                menuContainer.SetActive(true);
+                Invoke("gameover",5.0f);
 
                 if(transform.position.z > 490f)
                 {

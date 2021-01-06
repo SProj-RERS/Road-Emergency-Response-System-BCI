@@ -23,6 +23,12 @@ public class StopCharacterMotion : MonoBehaviour
         waypointscript = GetComponent<BetterWaypointFollower>();
         animation = GetComponent<Animator>();
     }
+
+    void gameover()
+    {
+        menuContainer.SetActive(true);
+    }
+
     void OnTriggerEnter(Collider collision)
    {
        if(collision.tag == "maincar")
@@ -53,7 +59,7 @@ public class StopCharacterMotion : MonoBehaviour
                 enteridle[p] = 0;
             }
             dead = 1;
-            menuContainer.SetActive(true);
+            Invoke("gameover",10.0f);
        }  
     }
 

@@ -23,8 +23,6 @@ public class movefiretruck : MonoBehaviour
        fireAudio.PlayOneShot(fireSound, 1.0f);
        speed = 100;
        new_x = (1)*maincar.position.x;
-       print(maincar.position.x);
-       transform.position = Vector3.MoveTowards(transform.position, new Vector3(new_x, transform.position.y, transform.position.z), speed * Time.deltaTime);
-        
+       transform.position = Vector3.MoveTowards(transform.position, new Vector3(new_x, transform.position.y, transform.position.z), speed * Time.deltaTime);  
     }
 }

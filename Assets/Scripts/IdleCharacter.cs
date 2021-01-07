@@ -110,10 +110,8 @@ public class IdleCharacter : MonoBehaviour
                 {
                     person_animation.runtimeAnimatorController = Resources.Load("Running") as RuntimeAnimatorController;
                     person.transform.position = Vector3.MoveTowards(person.transform.position, new_position, 50 * Time.deltaTime);
-                    i += 20%(k+1);
-                    j += 15%(k+l);
-                    k += 2;
-                    l += 1;
+                    i += 7;
+                    j += 6;
                 }
                 if(person.transform.position == new_position && enteridle[p] == 0)
                 {

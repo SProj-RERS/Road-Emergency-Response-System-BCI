@@ -773,6 +773,11 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: a9488f2f458551e478f5f289cd22df89, type: 2}
+    - target: {fileID: 5866666021909216657, guid: 05c8228be0682b9409e86786279018a2,
+        type: 3}
+      propertyPath: m_ApplyRootMotion
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 05c8228be0682b9409e86786279018a2, type: 3}
 --- !u!1 &25301738 stripped
@@ -1406,6 +1411,11 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: a9488f2f458551e478f5f289cd22df89, type: 2}
+    - target: {fileID: 5866666021909216657, guid: 05c8228be0682b9409e86786279018a2,
+        type: 3}
+      propertyPath: m_ApplyRootMotion
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 05c8228be0682b9409e86786279018a2, type: 3}
 --- !u!1 &82566453 stripped
@@ -9330,8 +9340,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 3.1346188, y: 2.2548163, z: 7.3876123}
+  m_Center: {x: 0.018535748, y: 1.0809314, z: -0.64794475}
 --- !u!4 &576839285 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 481256, guid: 8b2d47fdc2e25ac4f9721480a68bbefa,
@@ -14804,6 +14814,11 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: dd896e108f451dc44b39b365eef0f99e, type: 2}
+    - target: {fileID: 5866666021909216657, guid: 05c8228be0682b9409e86786279018a2,
+        type: 3}
+      propertyPath: m_ApplyRootMotion
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 05c8228be0682b9409e86786279018a2, type: 3}
 --- !u!1 &821769171 stripped
@@ -15826,6 +15841,11 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: d1740ac81a5549549b0328511d7606f6, type: 2}
+    - target: {fileID: 5866666021909216657, guid: 55c252c8caa37fd48861f9998e085519,
+        type: 3}
+      propertyPath: m_ApplyRootMotion
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 55c252c8caa37fd48861f9998e085519, type: 3}
 --- !u!1 &894331633 stripped
@@ -18950,6 +18970,11 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: 4df7e8b31c197f34fa9b0e74b6267932, type: 2}
+    - target: {fileID: 5866666021909216657, guid: 55c252c8caa37fd48861f9998e085519,
+        type: 3}
+      propertyPath: m_ApplyRootMotion
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 55c252c8caa37fd48861f9998e085519, type: 3}
 --- !u!1 &995885683
@@ -20623,6 +20648,11 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: dd896e108f451dc44b39b365eef0f99e, type: 2}
+    - target: {fileID: 5866666021909216657, guid: 55c252c8caa37fd48861f9998e085519,
+        type: 3}
+      propertyPath: m_ApplyRootMotion
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 55c252c8caa37fd48861f9998e085519, type: 3}
 --- !u!1 &1078593921 stripped
@@ -25736,8 +25766,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 3.1346188, y: 2.2548163, z: 7.3876123}
+  m_Center: {x: 0.018535748, y: 1.0809314, z: -0.64794475}
 --- !u!1001 &1370870380
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -29890,6 +29920,11 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: a9488f2f458551e478f5f289cd22df89, type: 2}
+    - target: {fileID: 5866666021909216657, guid: 55c252c8caa37fd48861f9998e085519,
+        type: 3}
+      propertyPath: m_ApplyRootMotion
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 55c252c8caa37fd48861f9998e085519, type: 3}
 --- !u!1 &1577571297 stripped
@@ -31052,8 +31087,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 3.1346188, y: 2.2548163, z: 7.3876123}
+  m_Center: {x: 0.018535748, y: 1.0809314, z: -0.64794475}
 --- !u!1001 &1649100944
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -31838,6 +31873,11 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: dd896e108f451dc44b39b365eef0f99e, type: 2}
+    - target: {fileID: 5866666021909216657, guid: 05c8228be0682b9409e86786279018a2,
+        type: 3}
+      propertyPath: m_ApplyRootMotion
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 05c8228be0682b9409e86786279018a2, type: 3}
 --- !u!1 &1694009504 stripped
@@ -35119,7 +35159,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 158abd137ed5ff048a28ae6e886c6420,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1029.9
+      value: 1043.8
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 158abd137ed5ff048a28ae6e886c6420,
         type: 3}
@@ -37780,6 +37820,11 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: 4df7e8b31c197f34fa9b0e74b6267932, type: 2}
+    - target: {fileID: 5866666021909216657, guid: 05c8228be0682b9409e86786279018a2,
+        type: 3}
+      propertyPath: m_ApplyRootMotion
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 05c8228be0682b9409e86786279018a2, type: 3}
 --- !u!1 &2046204800 stripped
@@ -37876,8 +37921,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 3.1346188, y: 2.2548163, z: 7.3876123}
+  m_Center: {x: 0.018535748, y: 1.0809314, z: -0.64794475}
 --- !u!1001 &2054030463
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -38268,6 +38313,11 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: dd896e108f451dc44b39b365eef0f99e, type: 2}
+    - target: {fileID: 5866666021909216657, guid: 55c252c8caa37fd48861f9998e085519,
+        type: 3}
+      propertyPath: m_ApplyRootMotion
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 55c252c8caa37fd48861f9998e085519, type: 3}
 --- !u!1 &2077877513 stripped
@@ -39370,6 +39420,11 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: 4df7e8b31c197f34fa9b0e74b6267932, type: 2}
+    - target: {fileID: 5866666021909216657, guid: 55c252c8caa37fd48861f9998e085519,
+        type: 3}
+      propertyPath: m_ApplyRootMotion
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 55c252c8caa37fd48861f9998e085519, type: 3}
 --- !u!1 &2133223358
@@ -39816,7 +39871,7 @@ PrefabInstance:
     - target: {fileID: 5836408109611268238, guid: c01dbb5a0a6f1a24d8fdcb41541e497e,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 603.4
+      value: 613.2
       objectReference: {fileID: 0}
     - target: {fileID: 5836408109611268238, guid: c01dbb5a0a6f1a24d8fdcb41541e497e,
         type: 3}

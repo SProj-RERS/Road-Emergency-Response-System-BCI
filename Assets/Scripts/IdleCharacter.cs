@@ -72,7 +72,7 @@ public class IdleCharacter : MonoBehaviour
         float new_x2 = character.position.x+15f;
         float new_y2 = character.position.y;
         float new_z2 = character.position.z-18f;
-        Instantiate(blood1,new Vector3(new_x2,new_y2,new_z2),character.rotation);
+        Instantiate(blood2,new Vector3(new_x2,new_y2,new_z2),character.rotation);
     }
 
     void Update()

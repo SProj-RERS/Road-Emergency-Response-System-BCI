@@ -19,7 +19,17 @@ public class moveambulance : MonoBehaviour
     void Start()
     {
         ambAudio = GetComponent<AudioSource>();
-        new_x = (1)*maincar.position.x-30f;
+        if (maincar.position.z > 490f){
+        new_x = (1)*maincar.position.x+400f;
+        print("hi");
+        
+        }
+        if (maincar.position.z < 490f)
+        {
+             new_x = (1)*maincar.position.x+100f;
+            
+        }
+        // print(new_x);
         new_z = (1)*maincar.position.z-20f;
     }
 
@@ -37,7 +47,7 @@ public class moveambulance : MonoBehaviour
     {
         if(other.tag == "end")
         {
-            print("disappear");
+            // print("disappear");
             Destroy(gameObject);
             UnityEditor.EditorApplication.isPlaying = false;
         }

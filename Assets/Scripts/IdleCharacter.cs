@@ -97,8 +97,6 @@ public class IdleCharacter : MonoBehaviour
         {
             int i = 0;
             int j = 0;
-            int k = 1;
-            int l = 0;
             for(int p=0; p<total_alive; p++)
             {
                 Animator person_animation;

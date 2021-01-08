@@ -23,7 +23,7 @@ public class HoodCollision : MonoBehaviour
 
    void finish()
    {
-       UnityEditor.EditorApplication.isPlaying = false;
+    //    UnityEditor.EditorApplication.isPlaying = false;
    }
 
    void gameover()

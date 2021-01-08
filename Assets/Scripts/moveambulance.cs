@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEditor;
 
 public class moveambulance : MonoBehaviour
 {
@@ -51,7 +51,7 @@ public class moveambulance : MonoBehaviour
         {
             // print("disappear");
             Destroy(gameObject);
-            UnityEditor.EditorApplication.isPlaying = false;
+            // UnityEditor.EditorApplication.isPlaying = false;
         }
     }
 

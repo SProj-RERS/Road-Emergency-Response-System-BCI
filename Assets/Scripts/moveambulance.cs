@@ -15,22 +15,24 @@ public class moveambulance : MonoBehaviour
     public float new_z;
     public float new_y;
     public GameObject[] othercars;
+    public GameObject deadperson;
 
     void Start()
     {
         ambAudio = GetComponent<AudioSource>();
-        if (maincar.position.z > 490f){
-        new_x = (1)*maincar.position.x+400f;
-        print("hi");
+        deadperson = GameObject.FindWithTag("deadcharacter");
+        // if (deadperson.transform.position.z > 490f){
+        new_x = (1)*deadperson.transform.position.x;
+        // print("hi");
         
-        }
-        if (maincar.position.z < 490f)
-        {
-             new_x = (1)*maincar.position.x+100f;
+        // }
+        // if (deadperson.transform.position.z < 490f)
+        // {
+            //  new_x = (1)*deadperson.transform.position.x+100f;
             
-        }
+        // }
         // print(new_x);
-        new_z = (1)*maincar.position.z-20f;
+        new_z = (1)*deadperson.transform.position.z-20f;
     }
 
     // Update is called once per frame

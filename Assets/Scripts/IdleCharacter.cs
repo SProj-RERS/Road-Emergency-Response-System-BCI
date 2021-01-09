@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class IdleCharacter : MonoBehaviour
 {
@@ -25,6 +26,11 @@ public class IdleCharacter : MonoBehaviour
     void gameover()
     {
         menuContainer.SetActive(true);
+        Invoke("restart",40f);
+    }
+    void restart()
+    {
+        SceneManager.LoadScene(0);
     }
 
     void OnTriggerEnter(Collider collision)

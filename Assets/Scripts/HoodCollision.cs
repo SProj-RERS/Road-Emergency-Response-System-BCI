@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 
 public class HoodCollision : MonoBehaviour
 {
@@ -26,10 +26,15 @@ public class HoodCollision : MonoBehaviour
     //    UnityEditor.EditorApplication.isPlaying = false;
    }
 
-   void gameover()
-   {
+    void gameover()
+    {
        menuContainer.SetActive(true);
-   }
+       Invoke("restart",10f);
+    }
+    void restart()
+    {
+        SceneManager.LoadScene(0);
+    }
 
     void OnTriggerEnter(Collider other)
     {       

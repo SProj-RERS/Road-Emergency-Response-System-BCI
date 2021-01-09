@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class StopCharacterMotion : MonoBehaviour
 {
@@ -27,8 +28,12 @@ public class StopCharacterMotion : MonoBehaviour
     void gameover()
     {
         menuContainer.SetActive(true);
+        Invoke("restart",40f);
     }
-
+    void restart()
+    {
+        SceneManager.LoadScene(0);
+    }
     void OnTriggerEnter(Collider collision)
    {
        if(collision.tag == "maincar")

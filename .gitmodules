@@ -1,0 +1,3 @@
+[submodule "Assets/Plugins/Emotiv-Unity-Plugingit"]
+	path = Assets/Plugins/Emotiv-Unity-Plugingit
+	url = https://github.com/Emotiv/unity-plugin.git

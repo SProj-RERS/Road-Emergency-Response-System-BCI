@@ -6,6 +6,7 @@ import time
 import sys
 import csv
 import pandas as pd
+import keyboard
 
 # define request id
 QUERY_HEADSET_ID                    =   1
@@ -264,21 +265,27 @@ class Cortex():
             ]
             
             df = pd.DataFrame(columns=cols)
+            i= 0
 
-            for i in range(100):
-                new_data = self.ws.recv()
-                dict_data = json.loads(new_data)
+            while True:
+                if keyboard.is_pressed('q'):
+                    break
+                else:
 
-                if i > 0:
-                    eeg_data = dict_data['eeg']
-                    time = dict_data['time']
-                    list_temp = [time]+eeg_data
-                    list_temp = list_temp[0:-1]
-                    series = pd.Series(list_temp,index=cols)
-                    df = df.append(series,ignore_index=True)
+                    new_data = self.ws.recv()
+                    dict_data = json.loads(new_data)
+
+                    if i > 0:
+                        eeg_data = dict_data['eeg']
+                        time = dict_data['time']
+                        list_temp = [time]+eeg_data
+                        list_temp = list_temp[0:-1]
+                        series = pd.Series(list_temp,index=cols)
+                        df = df.append(series,ignore_index=True)
+                i += 1
 
             df = df.drop(columns=['EEG.Counter','EEG.Interpolated', 'EEG.RawCq','EEG.Battery'])
-            df.to_csv('recording.csv')
+            df.to_csv('recording.csv', index=False)
 
     def query_profile(self):
         print('query profile --------------------------------')

@@ -3,6 +3,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using EmotivUnityPlugin;
 using Zenject;
+using System.IO;
 
 namespace dirox.emotiv.controller
 {
@@ -14,12 +15,12 @@ namespace dirox.emotiv.controller
     {
         DataStreamManager _dataStreamMgr = DataStreamManager.Instance;
 
-        [SerializeField] private Text  eegHeader;     // header of eeg data exclude MARKERS
-        [SerializeField] private Text  eegData;      // eeg data stream
-        [SerializeField] private Text  motHeader;    // header of motion data
-        [SerializeField] private Text  motData;      // motion data 
-        [SerializeField] private Text  pmHeader;     // header of performance metric data
-        [SerializeField] private Text  pmData;       // performance metric data
+        [SerializeField] public Text  eegHeader;     // header of eeg data exclude MARKERS
+        [SerializeField] public Text  eegData;      // eeg data stream
+        [SerializeField] public Text  motHeader;    // header of motion data
+        [SerializeField] public Text  motData;      // motion data 
+        [SerializeField] public Text  pmHeader;     // header of performance metric data
+        [SerializeField] public Text  pmData;       // performance metric data
         float _timerDataUpdate = 0;
         const float TIME_UPDATE_DATA = 1f;
 
@@ -50,6 +51,7 @@ namespace dirox.emotiv.controller
                 }
                 eegHeader.text  = eegHeaderStr;
                 eegData.text    = eegDataStr;
+              
             }
 
             // update motion data
@@ -89,7 +91,12 @@ namespace dirox.emotiv.controller
                     pmHeader.text  = pmHeaderStr;
                     pmData.text    = pmDataStr;
                 }
-                
+                //Data will be saved in text file over here
+                // string filename = "pmData.txt";
+                // string fullpath = @"C:\Users\omeri\Desktop\";
+                // string[] pm_data = {pmData.text};
+                // File.WriteAllLines(fullpath, pm_data);
+                // UnityEngine.Debug.Log(eegHeaderStr);  
             }
         }
 
@@ -115,6 +122,7 @@ namespace dirox.emotiv.controller
             Debug.Log("onEEGUnSubBtnClick");
             List<string> dataStreamList = new List<string>(){DataStreamName.EEG};
             _dataStreamMgr.UnSubscribeData(dataStreamList);
+            
             // clear text
             eegHeader.text  = "EEG Header: ";
             eegData.text    = "EEG Data: ";

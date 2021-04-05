@@ -623,6 +623,7 @@ namespace EmotivUnityPlugin
                 }
                 // Subscribe data
                 _dsProcess.SubscribeData("");
+                // Debug.Log(dataStreamList);
             }
             else {
                 UnityEngine.Debug.Log("SubscribeMoreData: A Session has not been activated.");

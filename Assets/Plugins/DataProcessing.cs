@@ -1,3 +1,12 @@
+/*
+ * Class: Data Processing
+ * 
+ * Created by hoang@emotiv.com. 2014
+ * Last Changed: 03/2020
+ * NOTED: Don't know why a event from EmotivDataStream cannot call to tough to a UI action. 
+ *        So we need DataProcessing detect the event then call another function to a UI action.
+*/
+
 using System;
 using System.Threading;
 using UnityEngine;
@@ -14,8 +23,12 @@ public class DataProcessing
 {
     static DataProcessing _instance = null;
     static readonly object _object = new object();
-    const int NUMBER_OF_SENSORS = 16;
+    const int NUMBER_OF_SENSORS = 16; // 14 channel EEG, CMS, DRL
 
+    // -1: haven't checked yet
+    // 0: license expried
+    // > 0 and <= 7. Free license
+    // a big number. License valid
     double _nRemainingDay = -1;
     int _lastNSamples = 0;
     ContactQualityValue[] _contactQualityData = new ContactQualityValue[NUMBER_OF_SENSORS];
@@ -36,6 +49,9 @@ public class DataProcessing
     
     Headset _curHeadsetObjectConnected = null;
 
+    // This value is for fix issue that noted in description of the class. 
+    // if it is null. the connected event is processed. or haven't no event yet. 
+    // if it is not null. the connected event is waiting for process. 
     string _headsetIdConnected = null;
     bool _enableQueryHeadset  = true;
     bool _isConnect           = false;    
@@ -80,10 +96,13 @@ public class DataProcessing
     public void SetConnectedHeadset (Headset headsetInfos)
     {
         lock (_object) {
+            // Debug.Log("======== SetConnectedHeadset " + headsetInfos.HeadsetID);
             _curHeadsetObjectConnected = headsetInfos;
         }
     }
 
+    // disable query headset while connecting to a headset
+    // and enable it again after done connecting process(success or failed)
     public void EnableQueryHeadset(bool enable)
     {
         lock (_object) {
@@ -111,8 +130,54 @@ public class DataProcessing
                 _contactQualityData[i] = ContactQualityValue.NO_SIGNAL;
             }
 
+            // Only for TEST: Subscribe data: motions, power band , peformance metrics
+            // Will be remove when release
+            // print motions
+            // print header motion
+            // string motionChansStr = "";
+            // string motionDataStr = "";
+            // foreach (var chan in EmotivDataStream.Instance.GetMotionChannels()) {
+            //     motionChansStr += ChannelStringList.ChannelToString(chan) + " , ";
+                
+            //     double[] data = EmotivDataStream.Instance.GetMotionData(chan);
+            //     double dataTmp = 0;
+            //     if (data != null && data.Length > 0)
+            //         dataTmp = data[0];
+            //     motionDataStr += dataTmp.ToString() + " , ";
+            // }
+            // UnityEngine.Debug.Log(" Motion Chanels streams " + motionChansStr);
+            // UnityEngine.Debug.Log(" Motion Data streams " + motionDataStr);
+            // print power band data
+            // string powListsStr = "";
+            // foreach (var ele in EmotivDataStream.Instance.GetBandPowerLists()) {
+            //     powListsStr += ele + " , ";
+            // }
+            // UnityEngine.Debug.Log(" Power band lists streams " + powListsStr);
+
+            // if (EmotivDataStream.Instance.GetNumberPowerBandSamples() > 0) {
+            //     double alphaAF3 = EmotivDataStream.Instance.GetAlphaData(Channel_t.CHAN_AF3);
+            //     UnityEngine.Debug.Log(" Alpha AF3 Data " + alphaAF3.ToString());
+            // }
+            // else
+            // {
+            //     UnityEngine.Debug.Log(" No Alpha AF3 Data ");
+            // }
+
+            // Peformance metrics data
+            // string pmListsStr = "";
+            // string pmDataStr = "";
+            // foreach (var ele in EmotivDataStream.Instance.GetPMLists()) {
+            //     pmListsStr      += ele + " , ";
+            //     double pmData   = EmotivDataStream.Instance.GetPMData(ele);
+            //     pmDataStr       += pmData.ToString() + " , ";
+            // }
+            // UnityEngine.Debug.Log(" Peformance metrics lists streams " + pmListsStr);
+            // UnityEngine.Debug.Log(" Peformance metrics data " + pmDataStr);
+
+
             int cqSize = DataStreamManager.Instance.GetNumberCQSamples();
 
+            // Currently , we only support insight, epoc, epoc+, epocX . Other headsets will be supported in next version
             if (_curHeadsetObjectConnected.HeadsetType != HeadsetTypes.HEADSET_TYPE_INSIGHT)
             {
                 _contactQualityData[(int)Channels.AF3] = (ContactQualityValue)(int)DataStreamManager.Instance.GetContactQuality(Channel_t.CHAN_AF3);
@@ -130,7 +195,8 @@ public class DataProcessing
                 _contactQualityData[(int)Channels.T7]  = (ContactQualityValue)(int)DataStreamManager.Instance.GetContactQuality(Channel_t.CHAN_T7);
                 _contactQualityData[(int)Channels.T8]  = (ContactQualityValue)(int)DataStreamManager.Instance.GetContactQuality(Channel_t.CHAN_T8);
             } 
-            else {
+            else { // header: Battery, Signal, AF3, T7, Pz, T8, AF4, OVERALL,
+                // We keep using Channels because this app still follow it
                 _contactQualityData[(int)Channels.AF3] = (ContactQualityValue)(int)DataStreamManager.Instance.GetContactQuality(Channel_t.CHAN_AF3);
                 _contactQualityData[(int)Channels.T7]  = (ContactQualityValue)(int)DataStreamManager.Instance.GetContactQuality(Channel_t.CHAN_T7);
                 _contactQualityData[(int)Channels.O1]  = (ContactQualityValue)(int)DataStreamManager.Instance.GetContactQuality(Channel_t.CHAN_Pz);
@@ -164,6 +230,7 @@ public class DataProcessing
         return DataStreamManager.Instance.GetNumberEEGSamples();
     }
 
+    //TODO: Improve it next time
     public int GetLastNumberEEGSamples()
     {
         return _lastNSamples;
@@ -206,7 +273,25 @@ public class DataProcessing
             if (buf[(int)Channels.AF3] == null)
                 return null;
 
-           
+            // UnityEngine.Debug.Log(buf[(int)Channels.AF3][0] + ", " + 
+            // buf[(int)Channels.T7][0] + ", " + 
+            // buf[(int)Channels.T8][0] + ", " + 
+            // buf[(int)Channels.AF4][0] + ", " + 
+            // buf[(int)Channels.O1][0] + ", " + 
+            // buf[(int)Channels.F7][0] + ", " + 
+            // buf[(int)Channels.F3][0] + ", " + 
+            // buf[(int)Channels.FC5][0] + ", " + 
+            // buf[(int)Channels.P7][0] + ", " + 
+            // buf[(int)Channels.O2][0] + ", " + 
+            // buf[(int)Channels.P8][0] + ", " + 
+            // buf[(int)Channels.FC6][0] + ", " + 
+            // buf[(int)Channels.F4][0] + ", " + 
+            // buf[(int)Channels.F8][0]);
+
+            // double[] counterList = EmotivDataStream.Instance.GetEEGData(Channel_t.CHAN_COUNTER);
+            // for (int i = 0; i < _lastNSamples; i++) {
+            //     UnityEngine.Debug.Log("====== " + _lastNSamples + ", " + counterList[i]);
+            // }
 
             return buf;
         }

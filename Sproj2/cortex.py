@@ -274,7 +274,7 @@ class Cortex():
 
                     new_data = self.ws.recv()
                     dict_data = json.loads(new_data)
-
+                    print(new_data)
                     if i > 0:
                         eeg_data = dict_data['eeg']
                         time = dict_data['time']

@@ -14,15 +14,18 @@ public class ConnectToCortex : MonoBehaviour
 
     void Start()
     {
+        // set Application configuration
         _dataStream.SetAppConfig(AppConfig.ClientId, AppConfig.ClientSecret, 
                                  AppConfig.AppVersion, AppConfig.AppName,
                                  AppConfig.TmpAppDataDir, AppConfig.AppUrl, 
                                  EmotivAppslicationPath());
         
+        // Init logger
         _logger.Init();
         
         Debug.Log("Configure BrainViz - PRODUCT SERVER - version: " +AppConfig.AppVersion);
         
+        // start App
         _dataStream.StartAuthorize(AppConfig.AppLicenseId);
     }
     
@@ -79,12 +82,14 @@ public class ConnectToCortex : MonoBehaviour
     string EmotivAppslicationPath() {
         string path = Application.dataPath;
         string newPath = "";
+        // Debug.Log("ConnectToCortex: applicationPath: before " + path);
         if (Application.platform == RuntimePlatform.OSXPlayer) {
             newPath = Path.GetFullPath(Path.Combine(path, @"../../"));
         }
         else if (Application.platform == RuntimePlatform.WindowsPlayer) {
             newPath = Path.GetFullPath(Path.Combine(path, @"../"));
         }
+        // Debug.Log("ConnectToCortex: applicationPath: after " + newPath);
         return newPath;
     }
 }

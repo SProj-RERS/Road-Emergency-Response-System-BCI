@@ -1,17 +1,22 @@
+/// <summary>
+/// Contain configuration of a specific App.
+/// </summary>
 static class AppConfig
 {
     public static string AppUrl              = "wss://localhost:6868";
-    public static string AppName             = "UnityApp";
+    public static string AppName             = "useless";
     
-    public static string TmpAppDataDir       = "UnityApp";
-    public static string ClientId            = "SoOTsXapvB4O1E688z8YSkOQKVGYwfYSFVafmRpm";
-    public static string ClientSecret        = "A70pIYK3ktMcN0Czt3oddVFl2cWDUYmmu99saHy1OWNqVbQMRJtFSQkdVSLzVDgGUsSseJvZakIyxcFqL7HDPRvB8hYwZSCH7yiTGzqbPXlG4iYywHKVj9DR5sQ90o6y";
+    /// <summary>
+    /// Name of directory where contain tmp data and logs file.
+    /// </summary>
+    public static string TmpAppDataDir       = "Emotiv-Unity-Plugin";
+    public static string ClientId            = "Keqs8rKJEnay49TQhhkhb37ORhdWHQEfudzDi2oq";
+    public static string ClientSecret        = "rvgcQwI4rZNtcCOzXXJds4nvlJtGhNqCF5NofNLvJvEEFPtM0SDSWekEQZv6y5FTX78frHXQOvZAMNfc3RmPYtBE5h3vjNr7CdCs7xUSuY63f6iQY4YKItVOrUXkD3uc";
     public static string AppVersion          = "1.0.1 Dev";
     
+    /// <summary>
+    /// License Id is used for App
+    /// In most cases, you don't need to specify the license id. Cortex will find the appropriate license based on the client id
+    /// </summary>
     public static string AppLicenseId        = "";
-    // "license" : "892df88d-fba1-47d9-922e-4cd9236e4940",
-	// "client_id" : "207ITaQgyyX7LDhuFfk45y8sOww7GwAVv7kqOnnd",
-	// "client_secret" : "RwADDtaifuO8gu9PJOnGVDZDmmEursNKqHy5dxVVgI1rDltlkl1uphyKb6L8gEs5FmpyxwObZedD70gvBvSuKVYr5j1A3kxxeimCIZoidWNpjBeqEn7KSoJ7qw9yTF0Q",
-	// "debit" : 100
-
 }

@@ -1,9 +1,11 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.IO;
+using System.Text;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using EmotivUnityPlugin;
 using Zenject;
-using System.IO;
 
 namespace dirox.emotiv.controller
 {
@@ -15,15 +17,40 @@ namespace dirox.emotiv.controller
     {
         DataStreamManager _dataStreamMgr = DataStreamManager.Instance;
 
-        [SerializeField] public Text  eegHeader;     // header of eeg data exclude MARKERS
-        [SerializeField] public Text  eegData;      // eeg data stream
-        [SerializeField] public Text  motHeader;    // header of motion data
-        [SerializeField] public Text  motData;      // motion data 
-        [SerializeField] public Text  pmHeader;     // header of performance metric data
-        [SerializeField] public Text  pmData;       // performance metric data
+        [SerializeField] private Text  eegHeader;     // header of eeg data exclude MARKERS
+        [SerializeField] private Text  eegData;      // eeg data stream
+        [SerializeField] private Text  motHeader;    // header of motion data
+        [SerializeField] private Text  motData;      // motion data 
+        [SerializeField] private Text  pmHeader;     // header of performance metric data
+        [SerializeField] private Text  pmData;       // performance metric data
+        StringBuilder sb = new StringBuilder();
+
         float _timerDataUpdate = 0;
         const float TIME_UPDATE_DATA = 1f;
+        
+        void Start()
+        {
+            
+            string header = 
+                "Timestamp"+","+
+                "EEG.AF3"+","+
+                "EEG.F7"+","+
+                "EEG.F3"+","+
+                "EEG.FC5"+","+
+                "EEG.T7"+","+
+                "EEG.P7"+","+
+                "EEG.O1"+","+
+                "EEG.O2"+","+
+                "EEG.P8"+","+
+                "EEG.T8"+","+
+                "EEG.FC6"+","+
+                "EEG.F4"+","+
+                "EEG.F8"+","+
+                "EEG.AF4";
 
+            sb.AppendLine(header);
+            File.WriteAllText(@"C:\Users\omeri\Desktop\Road-Emergency-Response-System-BCI\Assets\_brain_visualizer\recording.csv",sb.ToString());
+        }
         void Update() 
         {
             if (!this.isActive) {
@@ -51,7 +78,12 @@ namespace dirox.emotiv.controller
                 }
                 eegHeader.text  = eegHeaderStr;
                 eegData.text    = eegDataStr;
-              
+                eegDataStr = eegDataStr.Remove(0,10);
+                string[] result = eegDataStr.Split(',');
+                string new_result = result[0]+","+result[3]+","+result[4]+","+result[5]+","+result[6]+","+result[7]+","+result[8]+","+result[9]+","+result[10]+","+result[11]+","+result[12]+","+result[13]+","+result[14]+","+result[15]+","+result[16];
+                
+                sb.AppendLine(new_result);
+                File.WriteAllText(@"C:\Users\omeri\Desktop\Road-Emergency-Response-System-BCI\Assets\_brain_visualizer\recording.csv",sb.ToString());
             }
 
             // update motion data
@@ -91,12 +123,7 @@ namespace dirox.emotiv.controller
                     pmHeader.text  = pmHeaderStr;
                     pmData.text    = pmDataStr;
                 }
-                //Data will be saved in text file over here
-                // string filename = "pmData.txt";
-                // string fullpath = @"C:\Users\omeri\Desktop\";
-                // string[] pm_data = {pmData.text};
-                // File.WriteAllLines(fullpath, pm_data);
-                // UnityEngine.Debug.Log(eegHeaderStr);  
+                
             }
         }
 
@@ -122,7 +149,6 @@ namespace dirox.emotiv.controller
             Debug.Log("onEEGUnSubBtnClick");
             List<string> dataStreamList = new List<string>(){DataStreamName.EEG};
             _dataStreamMgr.UnSubscribeData(dataStreamList);
-            
             // clear text
             eegHeader.text  = "EEG Header: ";
             eegData.text    = "EEG Data: ";
